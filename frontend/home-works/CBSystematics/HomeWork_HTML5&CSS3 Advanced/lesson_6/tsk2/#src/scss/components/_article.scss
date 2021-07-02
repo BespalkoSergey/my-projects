@@ -1,0 +1,12 @@
+article {
+  $green: rgb(0, 128, 0);
+  width: 80vw;
+  h4 {
+    text-align: center;
+    color: $green;
+    @include fs(40px);
+  }
+  p {
+    @include fs(20px);
+  }
+}

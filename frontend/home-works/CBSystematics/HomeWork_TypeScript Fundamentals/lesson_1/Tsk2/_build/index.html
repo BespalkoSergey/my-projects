@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 100;
+        user-select: none;
+        pointer-events: none;
+      }
+      html,
+      body {
+        width: 100vw;
+        height: 100vw;
+        overflow: hidden;
+      }
+      h1 {
+        --fs: 50px;
+        font-size: var(--fs);
+        margin-top: calc(100vh / 2 - var(--fs));
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

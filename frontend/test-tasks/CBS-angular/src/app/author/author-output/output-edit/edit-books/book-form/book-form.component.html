@@ -1,0 +1,64 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nameOfBook">Название</label>
+
+    <input
+      value="{{ item.nameOfBook }}"
+      id="nameOfBook"
+      type="text"
+      class="form-control"
+      formControlName="nameOfBook"
+      required
+    />
+
+    <div *ngIf="formErrors.nameOfBook" class="alert alert-danger">
+      {{ formErrors.nameOfBook }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="numberOfPages">Кол-во страниц</label>
+
+    <input
+      id="numberOfPages"
+      type="text"
+      class="form-control"
+      formControlName="numberOfPages"
+      required
+    />
+
+    <div *ngIf="formErrors.numberOfPages" class="alert alert-danger">
+      {{ formErrors.numberOfPages }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label
+      for="genre"
+      style="padding-top: 7px;"
+      class="bmd-label-floating"
+      style="color: #212529;"
+    >
+      Жанр
+    </label>
+    <select
+      class="px-3 py-2 form-control"
+      id="genre"
+      class="form-control"
+      formControlName="genre"
+    >
+      <option
+        *ngFor="let itm of arrGenres; let i = index"
+        [selected]="item.genre === itm ? true : false"
+        >{{ itm }}</option
+      >
+    </select>
+    <div *ngIf="formErrors.genre" class="alert alert-danger">
+      {{ formErrors.genre }}
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default" [disabled]="!bookForm.valid">
+    Сохранить
+  </button>
+</form>

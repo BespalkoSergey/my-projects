@@ -1,0 +1,1 @@
+@font-face{font-family:Ranchers-Regular;font-display:swap;src:url(../fonts/Ranchers-Regular.woff) format("woff"),url(../fonts/Ranchers-Regular.woff2) format("woff2");font-weight:400;font-style:normal}body{font-size:15px;display:grid;gap:30px}span{font-size:20px}div{font-size:30px}@media (max-width:767px){span{font-size:15px}div{font-size:20px}}

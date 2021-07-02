@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MicroData</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(52, 73, 94);
+      }
+      section {
+        width: 256px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      h1 {
+        background-color: #3498db;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: aliceblue;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.4s ease;
+      }
+      h1::after {
+        content: " ";
+        display: block;
+        height: 10px;
+        width: 10px;
+        background-color: #3498db;
+        position: absolute;
+        top: 38px;
+        transform: rotate(45deg);
+      }
+      ul {
+        margin-top: -10px;
+        background-color: black;
+        color: rgb(185, 189, 192);
+        max-height: 0px;
+        transition: all 0.4s ease;
+      }
+      .activeUL {
+        max-height: 15rem;
+      }
+      .notactiveH1 {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      li {
+        list-style: none;
+        border-bottom: 1px solid grey;
+        margin: 10px 10px 10px 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      li:first-child {
+        border-top: 1px solid grey;
+      }
+      li:hover {
+        background-color: rgb(15, 15, 15);
+      }
+      a {
+        text-decoration: none;
+        color: rgb(185, 189, 192);
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      itemprop="affiliation"
+      itemscope
+      itemtype="http://schema.org/Organization"
+    >
+      <h1 itemprop="name" class="notactiveH1">
+        CyberBionic Systematics
+      </h1>
+      <ul>
+        <li itemprop="address">
+          02002 Киев, ул. Евгения Сверстюка 19, 5 этаж, офис 502. м.
+          Левобережная
+        </li>
+        <li>
+          <a href="https://edu.cbsystematics.com" itemprop="url" target="_blank"
+            >https://edu.cbsystematics.com</a
+          >
+        </li>
+        <li itemprop="email">edu@cbsystematics.com</li>
+        <li itemprop="telephone">
+          0 800 750 312 (бесплатно с любого номера в Украине)
+        </li>
+        <br />
+      </ul>
+    </section>
+    <script>
+      document.querySelector("h1").addEventListener("click", (e) => {
+        document.querySelector("ul").classList.toggle("activeUL");
+        e.target.classList.toggle("notactiveH1");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <script>
+      window.addEventListener("beforeunload", function setCookie() {
+        document.cookie = `Data=${Date.now()}`;
+      });
+      window.addEventListener("load", function getCookie() {
+       let p = document.querySelector("p");
+       let data = document.cookie.toString();
+       data = parseInt(data.substr(data.indexOf("Data=")+5,13));
+       let date = new Date(data);
+       date = date.toUTCString().slice(5,-4);
+       p.textContent = `Последний раз был: ${date}`;
+      });
+    </script>
+  </body>
+</html>

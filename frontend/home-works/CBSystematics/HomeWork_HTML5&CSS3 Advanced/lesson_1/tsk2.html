@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HotTrips</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        width: 100vw;
+        overflow-x: hidden;
+      }
+      nav {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        height: 50px;
+        display: flex;
+        background-color: #fad390;
+        flex-wrap: wrap;
+        z-index: 10;
+      }
+      nav ul {
+        height: 50px;
+        margin-left: auto;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      nav li {
+        list-style: none;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #e55039;
+        font-weight: 600;
+        transition: all 0.4s ease;
+      }
+      nav a:hover {
+        font-size: 20px;
+      }
+      nav img {
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+      #start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #82ccdd;
+      }
+      #start h2 {
+        color: #3c6382;
+      }
+      #start .btn {
+        width: 90px;
+        text-align: center;
+        border: 1px solid #78e08f;
+        padding: 10px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #b8e994, #64e00b);
+        cursor: pointer;
+      }
+      #start a {
+        text-decoration: none;
+      }
+      #about {
+        width: 100vw;
+        height: 100vh;
+        background-color: #e55039;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 40px 40px 40px;
+      }
+      #about p {
+        margin-top: 20px;
+        text-align: justify;
+      }
+      #body {
+        display: flex;
+      }
+      #body aside {
+        height: 100vh;
+        width: 20vw;
+        background-color: rgb(226, 226, 226);
+      }
+      .side__block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .side__item {
+        width: 90%;
+        height: calc(95% / 4);
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .side__item + .side__item {
+        margin-top: 10px;
+      }
+      #body section {
+        height: 100vh;
+        width: 80vw;
+        background-color: #3c6382;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+      }
+      .item {
+        width: 30%;
+        overflow: hidden;
+        margin: 0 20px 0 20px;
+      }
+      .item__header {
+        text-align: center;
+      }
+      .item__photo img {
+        width: 100%;
+      }
+      .item__text {
+        text-align: center;
+      }
+      .item__btn {
+        border: 1px solid #78e08f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #91d8a1;
+        cursor: pointer;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+      .item__map {
+        position: absolute;
+        width: 400px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: none;
+      }
+      .item__map img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;
+        cursor: pointer;
+      }
+      .activ {
+        display: block;
+      }
+      #contact {
+        background-color: #0c2461;
+        color: lightgray;
+        font-size: 1vw;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#start"> <img src="/cityscape.png" alt="logo" /></a>
+        <ul>
+          <li><a href="#start"> Начальная </a></li>
+          <li><a href="#about"> О нас </a></li>
+          <li><a href="#body"> Отели </a></li>
+          <li><a href="#contact"> Контакты </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="start">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <a href="#body"><div class="btn">lorem</div></a>
+      </div>
+      <div id="about">
+        <h3>О нас</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat,
+          omnis quis iure impedit illo vitae earum saepe reprehenderit aperiam
+          laborum deserunt enim suscipit esse cumque consectetur modi, animi
+          quae assumenda. Accusantium accusamus quaerat ipsam at, fugit sint
+          illum quia inventore consectetur, tenetur pariatur eveniet tempore
+          laudantium est commodi labore iure ipsa reiciendis minus? Itaque ut et
+          voluptate incidunt! Eaque, dolores? Quas, minima ex recusandae quam ea
+          a aliquid temporibus porro odit iure earum, possimus laboriosam nihil
+          corporis modi fugiat. Cum, vel. Labore debitis unde quas eveniet
+          perspiciatis pariatur doloremque similique.
+        </p>
+      </div>
+      <div id="body">
+        <aside>
+          <div class="side__block">
+            <div class="side__item">
+              <div class="side__name">Тут может быть ваша реклама</div>
+              <div class="side__body"></div>
+            </div>
+            <div class="side__item">
+              <div class="side__name">Тут может быть ваша реклама</div>
+              <div class="side__body"></div>
+            </div>
+            <div class="side__item">
+              <div class="side__name">Тут может быть ваша реклама</div>
+              <div class="side__body"></div>
+            </div>
+            <div class="side__item">
+              <div class="side__name">Тут может быть ваша реклама</div>
+              <div class="side__body"></div>
+            </div>
+          </div>
+        </aside>
+        <section>
+          <div class="item">
+            <div class="item__header">Lorem ipsum dolor sit amet.</div>
+            <div class="item__photo">
+              <img
+                src="https://data.pencup.ru/uploaded-images/144-1546713492.369803.jpg"
+                alt="hotel"
+              />
+            </div>
+            <div class="item__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, eveniet!
+            </div>
+            <div class="item__btn">Посомотреть на карте</div>
+            <div class="item__map">
+              <img src="/exit.png" alt="exit" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20323.537385303785!2d30.453944431738275!3d50.45149025904957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8276e9ba57%3A0x444a4ee69406aad1!2z0JrQuNC10LLRgdC60LjQuSDQt9C-0L7Qv9Cw0YDQug!5e0!3m2!1sru!2sua!4v1588371211751!5m2!1sru!2sua"
+                width="400"
+                height="300"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__header">Lorem ipsum dolor sit amet.</div>
+            <div class="item__photo">
+              <img
+                src="https://telegraf.com.ua/files/2018/06/GLAVNAYAYAYAYAYAYAYAYA_1.jpg"
+                alt="hotel"
+              />
+            </div>
+            <div class="item__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, eveniet!
+            </div>
+            <div class="item__btn">Посомотреть на карте</div>
+            <div class="item__map">
+              <img src="/exit.png" alt="exit" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20344.269945087115!2d30.533938633398424!3d50.403208738135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5f61572b067%3A0x23679506ec56dce3!2z0JLRi9C00YPQsdC40YfQuA!5e0!3m2!1sru!2sua!4v1588371162964!5m2!1sru!2sua"
+                width="400"
+                height="300"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__header">Lorem ipsum dolor sit amet.</div>
+            <div class="item__photo">
+              <img
+                src="https://pix-feed.com/wp-content/uploads/2018/08/2561696063.jpg"
+                alt="hotel"
+              />
+            </div>
+            <div class="item__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, eveniet!
+            </div>
+            <div class="item__btn">Посомотреть на карте</div>
+            <div class="item__map">
+              <img src="/exit.png" alt="exit" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20305.721679760332!2d30.59513591428223!3d50.49295225097404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d047409b6b9b%3A0xb13a27d3efb8c702!2z0JXQn9CG0KbQldCd0KLQoA!5e0!3m2!1sru!2sua!4v1588371096853!5m2!1sru!2sua"
+                width="400"
+                height="300"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__header">Lorem ipsum dolor sit amet.</div>
+            <div class="item__photo">
+              <img
+                src="https://noi.md/uploads/images/Day_report/2017_06_07/226775.jpg"
+                alt="hotel"
+              />
+            </div>
+            <div class="item__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, eveniet!
+            </div>
+            <div class="item__btn">Посомотреть на карте</div>
+            <div class="item__map">
+              <img src="/exit.png" alt="exit" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20320.485593326724!2d30.514455067114252!3d50.45859436669511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6aeb46254f%3A0x8e70cf5f182d1883!2z0JrQvtC90YLRgNCw0LrRgtC-0LLQsNGPINC_0LvQvtGJ0LDQtNGM!5e0!3m2!1sru!2sua!4v1588371010978!5m2!1sru!2sua"
+                width="400"
+                height="300"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <pre id="contact">
+        02002 Киев, ул. Евгения Сверстюка 19, 5 этаж, офис 502. м. Левобережная
+        Учебный центр работает ежедневно с 09:00 - 21:00
+        
+        График работы менеджера по работе с клиентами:
+        
+        в будние дни	09:00 - 20:00
+        суббота	11:00 - 15:00
+        воскресенье	выходной
+         0 800 750 312 (бесплатно с любого номера в Украине)
+         edu@cbsystematics.com
+         support_cbs
+         cbs_support
+      </pre>
+    </footer>
+    <script>
+      document.querySelector("section").addEventListener("click", (e) => {
+        if (e.target.classList.contains("item__btn")) {
+          e.target.parentNode.children[4].classList.add("activ");
+          e.target.parentNode.children[4].children[0].addEventListener("click",()=>{
+            e.target.parentNode.children[4].classList.remove("activ");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="col">
+    <button
+      style="margin-top: 6px; margin-right: 1px;"
+      type="submit"
+      class="btn btn-outline-info"
+      (click)="close()"
+    >
+      ЗАКРЫТЬ
+    </button>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row flex-column">
+    <div class="col">
+      <form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="surname">Фамилия</label>
+
+          <input
+            id="surname"
+            type="text"
+            class="form-control"
+            formControlName="surname"
+            required
+          />
+
+          <div *ngIf="formErrors.surname" class="alert alert-danger">
+            {{ formErrors.surname }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Имя</label>
+
+          <input
+            id="name"
+            type="text"
+            class="form-control"
+            formControlName="name"
+            required
+          />
+
+          <div *ngIf="formErrors.name" class="alert alert-danger">
+            {{ formErrors.name }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="patronymic">Отчество</label>
+
+          <input
+            id="patronymic"
+            type="text"
+            class="form-control"
+            formControlName="patronymic"
+          />
+
+          <div *ngIf="formErrors.patronymic" class="alert alert-danger">
+            {{ formErrors.patronymic }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <input
+              class="form-control"
+              placeholder="ГГГГ-ММ-ДД"
+              formControlName="dp"
+              id="dp"
+              name="dp"
+              ngbDatepicker
+              #d="ngbDatepicker"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary calendar"
+                (click)="d.toggle()"
+                type="button"
+              >
+                Выбрать
+              </button>
+            </div>
+          </div>
+          <div *ngIf="formErrors.dp" class="alert alert-danger">
+            {{ formErrors.dp }}
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-default"
+          [disabled]="!authorForm.valid"
+        >
+          Сохранить
+        </button>
+      </form>
+    </div>
+    <div class="col">
+      <app-edit-books></app-edit-books>
+    </div>
+  </div>
+</div>

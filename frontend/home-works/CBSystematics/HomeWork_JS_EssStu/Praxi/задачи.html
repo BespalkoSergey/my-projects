@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Пользователь вводит в текстовое поле время в часах (например 18). Если время больше 17, то выводится сообщение «Добрый вечер». В любых других случаях — «Добрый день».
+
+      function inPut() {
+        let time = +prompt("Введите время");
+        time > 17? document.write("Добрый вечер"): document.write("Добрый день");
+      }
+	//   inPut(); //<------------- раскомментируйте;
+
+      // через prompt - Пользователь вводит 3 числа.
+      // Из этих чисел найти максимальное и выдать сообщение какое из найбольшее.
+      // Учесть вариант равенства чисел.
+function layOut(){
+	let operandArray = []; 
+	operandArray.push(+prompt("Введите число 1"));
+	operandArray.push(+prompt("Введите число 2"));
+	operandArray.push(+prompt("Введите число 3"));
+	operandArray.sort();
+	document.write(`Самое большое число ${operandArray[operandArray.length-1]}`);
+	}
+	// layOut(); //<------------- раскомментируйте;
+
+
+      // Написать реализацию кода который будет считать все числа с массива
+      // и выдавать результат суммы.
+      // Например: [2, 3, 5, 8] = 18, [4, 6, 5] = 15, [2,2] = 4
+
+      // Задача 1
+
+      var arr1 = [23, 45];
+      var arr2 = [44, 55, 667, 77];
+
+	  function sum(arra){
+		  let sum=0;
+		  for(let i=0;i<arra.length;i++){
+			sum+=arra[i];
+		  }
+		  document.write(`Сумма всех элементов ${sum}<br/>`);
+	  }
+	//   sum(arr1); //<------------- раскомментируйте;
+	//   sum(arr2); //<------------- раскомментируйте;
+
+      //1.1 написать код который проверяет длину массивов и выводит сообщение в котором элементов больше
+
+	  function verifyArr(arra1,arra2){
+		arra1.length>arra2.length? document.write(arr1):document.write(arr2);
+	  }
+	//   verifyArr(arr1,arr2); //<------------- раскомментируйте;
+
+      //1.2 дописать вариант если массивы равны и вывести отдельное сообщение если массивы пустые
+
+	  function verify2Arr(arra1,arra2){
+		if(arra1.length>arra2.length) document.write(arra1);
+		else if(arra2.length>arra1.length) document.write(arra2);
+		else if(arra1.length>0&& arra2.length>0 && arra1.length==arra2.length) document.write("они равны");
+		else document.write("они пустые");
+	  }
+	//  verify2Arr(arr1,arr2); //<------------- раскомментируйте;
+
+
+      //----------------------------------------------------------
+
+      // Задача 2
+
+      // 2.1 Написать ФУНКЦИЮ которая, принимает три параметра(имя, фамилия, возраст) и возращает такую строку (результат работы функции можна записать в переменную):
+      // Это "Фамилия" "Имя" ему "возраст " лет.
+
+      // greating('Иванов', 'Петр', '25')
+      // Результат: Это Иванов Петр ему 25 лет.
+      // greating('Сидоров', 'Иван', '17')
+      // Результат: Это Сидоров Иван ему 17 лет.
+	  
+	 function getValues(){
+		let sname =  prompt("Введите фамилию");
+		let name =  prompt("Введите имя");
+		let age =  prompt("Возраст");
+		document.write(`Это ${sname} ${name} ему ${age}`);
+	  }
+	// getValues(); //<------------- раскомментируйте;
+	  
+	  
+    </script>
+  </body>
+</html>

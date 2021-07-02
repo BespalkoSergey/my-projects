@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "TT Norms";
+  src: url("//db.onlinewebfonts.com/t/95d392d49b7f403beba771be8312d992.eot");
+  src: url("//db.onlinewebfonts.com/t/95d392d49b7f403beba771be8312d992.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/95d392d49b7f403beba771be8312d992.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/95d392d49b7f403beba771be8312d992.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/95d392d49b7f403beba771be8312d992.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/95d392d49b7f403beba771be8312d992.svg#TT Norms Light")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  src: url("//db.onlinewebfonts.com/t/07bc241768c969f6b6a27a7bf0dfb490.eot");
+  src: url("//db.onlinewebfonts.com/t/07bc241768c969f6b6a27a7bf0dfb490.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/07bc241768c969f6b6a27a7bf0dfb490.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/07bc241768c969f6b6a27a7bf0dfb490.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/07bc241768c969f6b6a27a7bf0dfb490.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/07bc241768c969f6b6a27a7bf0dfb490.svg#TT Norms Regular")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --indent-x: 22.18vw;
+}
+
+@media screen and (max-width: 1187px) {
+  :root {
+    --indent-x: 17.18vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --indent-x: 14.18vw;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  :root {
+    --indent-x: 2.18vw;
+  }
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "TT Norms";
+  line-height: 26px;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+img {
+  border: 2px solid black;
+}
+
+.wrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+}
+
+.counter-outer {
+  position: absolute;
+  left: 0px;
+  top: 23px;
+  white-space: nowrap;
+}
+
+.main {
+  position: relative;
+  margin-top: 0;
+}
+
+.hr {
+  z-index: -1;
+  top: 100px;
+
+  left: 0;
+  position: absolute;
+  height: 2px;
+  width: 100vw;
+  background-color: #000;
+}
+
+.text-hr {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #e8e8e9;
+}
+
+.slick-track {
+  display: flex;
+}
+
+/* slider-s */
+.slider-s {
+  position: relative;
+}
+
+.slick-wrapper {
+  display: none;
+}
+
+.slider-s .slick-track {
+  transform: translate3d(0px, 0px, 0px) !important;
+  height: 106px;
+  align-items: center;
+}
+
+.slider-s .slick-slide {
+  margin-left: 60px;
+}
+
+.slider-s .slick-list {
+  margin-left: -60px;
+}
+
+.slider-s-item {
+  max-width: 212px;
+  margin-right: 140px !important;
+}
+
+.slider-s-item img {
+  height: 56px;
+  transition: all 1s ease;
+}
+
+.slider-s-item.slick-current img {
+  height: 72px;
+}
+
+.slider-s-item .name {
+  font-size: 13px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* slider-l */
+.slider-l {
+  position: relative;
+}
+
+.slider-l-item .header {
+  display: flex;
+  column-gap: 32px;
+}
+
+.slider-l-item img {
+  max-height: 206px;
+}
+
+.slider-l-item .title {
+  flex-basis: 50%;
+  max-width: 712px;
+}
+
+.title p {
+  margin-top: 4px;
+}
+
+.text {
+  width: calc(100vw - 48px);
+}
+
+.text .text-title {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.text-title h2 {
+  white-space: nowrap;
+}
+
+.text-title img {
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.arrows {
+  margin-top: 7.5px;
+  margin-left: auto;
+  display: flex;
+}
+
+#arrow-r,
+#arrow-l {
+  stroke: #000;
+}
+
+#arrow-r:hover,
+#arrow-l:hover {
+  stroke: #0054a6;
+  cursor: pointer;
+}
+
+#arrow-l.slick-arrow.slick-disabled,
+#arrow-r.slick-arrow.slick-disabled {
+  stroke: #e8e8e9;
+}
+
+@media screen and (max-width: 767px) {
+  .slider-l-item .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .text .text-body {
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+  .slider-l-item .title {
+    margin-top: 8px;
+  }
+  .slider-l-item {
+    width: calc(100vw - 48px);
+  }
+  .title h1 {
+    font-size: 24px;
+  }
+  .text-title h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    height: 100%;
+    padding: 0 var(--indent-x);
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slick-wrapper {
+    display: block;
+    width: 464px;
+  }
+  .main {
+    margin-top: 21px;
+  }
+  .text {
+    width: 712px;
+  }
+  .title p {
+    margin-top: 16px;
+  }
+  .text .text-title {
+    margin-top: 56px;
+  }
+  .text .text-body {
+    margin-top: 16px;
+  }
+  .hr {
+    top: -92px;
+  }
+  .arrows {
+    margin-left: 128px;
+  }
+  .counter-outer {
+    left: 658px;
+    top: 133px;
+  }
+}

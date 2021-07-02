@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.player {
+  width: 640px;
+  height: 490px;
+  background-color: #34495e;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - calc(490px / 2));
+}
+.track {
+  width: 100%;
+  height: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.track-container {
+  width: 100%;
+  border: 2px solid #16a085;
+  border-radius: 4px;
+}
+.track-bar {
+  width: 0%;
+  height: 7px;
+  border-radius: 4px;
+  background-color: #909396;
+  transition: width 0.5s linear;
+}
+video {
+  width: 100%;
+  height: 360px;
+  border-radius: 4px;
+}
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.fas {
+  font-size: 35px;
+  color: #2ecc71;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.fas:not(#play):active {
+  color: #ff7979;
+}
+#play {
+  transition: all 0.7s ease;
+}
+.active {
+  color: #ff7979;
+}
+.btns {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+}
+[class^="btn-"] {
+  width: calc(95% / 3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1abc9c;
+  border: 2px solid #16a085;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btns p {
+  pointer-events: none;
+  color: rgb(94, 93, 93);
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}

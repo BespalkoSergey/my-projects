@@ -1,0 +1,56 @@
+div {
+  margin: 5px;
+}
+body > div.fstLn > button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+.success {
+  background: greenyellow;
+}
+.info {
+  background: aqua;
+}
+.warning {
+  background: orange;
+}
+.danger {
+  background: red;
+}
+.default {
+  background: lightgrey;
+  color: black;
+}
+.scdLn > div {
+  float: left;
+}
+.scdLn:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+body > div.scdLn > div {
+  padding: 10px 20px;
+  background: white;
+}
+.success1 {
+  border: 1px solid greenyellow;
+  color: greenyellow;
+}
+.info1 {
+  border: 1px solid aqua;
+  color: aqua;
+}
+.warning1 {
+  border: 1px solid orange;
+  color: orange;
+}
+.danger1 {
+  border: 1px solid red;
+  color: red;
+}
+.default1 {
+  border: 1px solid grey;
+  color: grey;
+}

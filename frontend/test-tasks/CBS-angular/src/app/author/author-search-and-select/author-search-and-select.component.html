@@ -1,0 +1,37 @@
+<form [formGroup]="authorForm__input">
+  <div class="form-group">
+    <div class="row">
+      <div class="col">
+        <label
+          for="search"
+          style="padding-top: 7px;"
+          class="pl-2 bmd-label-floating text-info"
+          >Поиск:</label
+        >
+        <input
+          id="search"
+          type="text"
+          class="form-control"
+          formControlName="search"
+          required
+        />
+      </div>
+      <div class="col">
+        <label
+          for="select"
+          style="padding-top: 7px;"
+          class="bmd-label-floating text-info"
+          >Сортировать:</label
+        >
+        <select
+          class="px-3 py-2 form-control"
+          id="select"
+          formControlName="select"
+        >
+          <option value="null" checked>По умолчанию</option>
+          <option *ngFor="let item of arr; let i = index">{{ item }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>

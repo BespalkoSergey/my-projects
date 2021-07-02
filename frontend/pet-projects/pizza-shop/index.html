@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Roboto:300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/weather.css" />
+    <link rel="stylesheet" href="css/pages/main.css" />
+    <link rel="stylesheet" href="css/pages/pages.css">
+    <link rel="stylesheet" href="css/pages/percent.css" />
+    <title>Pizza Ideale</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="logo">
+          <div data-href="pages/main.html" class="nav-link">
+            <span class="link-text logo-text">Pizza Ideale</span>
+            <img src="img/arrow.png" alt="arrow" />
+          </div>
+        </li>
+        <li class="nav-item">
+          <div data-href="pages/percent.html" class="nav-link">
+            <img src="img/percent.png" alt="percent" />
+            <span class="link-text">Акции</span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div data-href="pages/pizza.html" class="nav-link">
+            <img src="img/pizza.png" alt="pizza" />
+            <span class="link-text">Пицца</span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div data-href="pages/drinks.html" class="nav-link">
+            <img src="img/wine-glass.png" alt="wine-glass" />
+            <span class="link-text">Напитки</span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div data-href="pages/deserts.html" class="nav-link">
+            <img src="img/cupcake.png" alt="cupcake" />
+            <span class="link-text">Десерты</span>
+          </div>
+        </li>
+        <li class="nav-item bottom">
+          <div data-href="pages/basket.html" class="nav-link">
+            <img src="img/basket.png" alt="basket" />
+            <span class="link-text">Корзина</span>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div data-href="pages/contacts.html" class="nav-link">
+            <img src="img/whatsapp.png" alt="contacts" />
+            <span class="link-text">Контакты</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /navbar -->
+    <!-- main -->
+    <main>
+      <div class="main-page"></div>
+    </main>
+    <!-- /main -->
+    <!-- widgets -->
+    <div class="widgets">
+      <!-- widget-weather -->
+      <div class="weather">
+        <div class="weather-data">
+          <img src="" alt="" />
+          <span class="data-weather-city"> </span>
+        </div>
+        <div class="weather-data f-15">
+          <img class="data-weather-img" src="img/house.svg" alt="house" />
+          <span class="data-weather-temp"> </span>
+        </div>
+        <div class="weather-data">
+          <img class="data-weather-img" src="img/footprints.svg" alt="foot" />
+          <span class="data-weather-feelLike"> </span>
+        </div>
+        <div class="weather-data">
+          <img class="data-weather-img" src="" alt="" />
+          <span class="data-weather-minTemp"> </span>
+        </div>
+        <div class="weather-data">
+          <img class="data-weather-img" src="" alt="" />
+          <span class="data-weather-maxTemp"> </span>
+        </div>
+        <div class="weather-data">
+          <img class="data-weather-img" src="img/dawn.svg" alt="rise" />
+          <span class="data-weather-sunRise"> </span>
+        </div>
+        <div class="weather-data">
+          <img class="data-weather-img" src="img/sunset.svg" alt="set" />
+          <span class="data-weather-sunSet"> </span>
+        </div>
+        <img class="weather-icon" src="#" alt="weather" />
+      </div>
+      <!-- /widget-weather -->
+    </div>
+    <!-- /widgets -->
+    <!-- Author -->
+    <div class="author">
+      <p>
+        Сайт портфолио <br />
+        Беспалько Сергей
+      </p>
+    </div>
+    <!-- /Author -->
+    <!-- skripts -->
+    <script src="js/weather.js"></script>
+    <script src="js/general.js"></script>
+    <!-- /skripts -->
+  </body>
+</html>

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  background: linear-gradient(to bottom, #94bbe9, #eeaeca);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 51px;
+  padding: 10px;
+}
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+}
+p {
+  margin-top: 5px;
+}
+.inner,
+button {
+  position: absolute;
+  bottom: 20px;
+}
+button {
+  height: 77px;
+  width: 77px;
+  right: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  color: rgb(128, 128, 128);
+}
+.inner {
+  height: 77px;
+  width: 91px;
+  font-size: 50px;
+  left: 40px;
+}

@@ -1,0 +1,51 @@
+<div class="row" style="width: 100vw;">
+  <div class="col">
+    <button
+      style="margin-top: 6px; margin-right: 1px;"
+      type="submit"
+      class="btn btn-outline-info"
+      (click)="addAuthor()"
+    >
+      ДОБАВИТЬ АВТОРА
+    </button>
+  </div>
+</div>
+<div class="row m-0" *ngIf="arr">
+  <div
+    class="col-md-6 col-lg-4 col-xl-3 mt-2"
+    *ngFor="let item of arr; let i = index"
+  >
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <span> {{ item["surname"] }} </span> {{ item["name"].substr(0, 1) }}.
+          <span *ngIf="item['patronymic']">
+            {{ item["patronymic"].substr(0, 1) }}.
+          </span>
+        </h5>
+        <p class="card-text">Книг: {{ item.arrayOfBooks.length }}</p>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="editAuthor($event.target)"
+        >
+          РЕДАКТИРОВАТЬ
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteAuthor($event.target)"
+        >
+          УДАЛИТЬ
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="showAuthor($event.target)"
+        >
+          ДЕТАЛИ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+/* Задание 3
+Реализуйте разметку, подобную изображению stickers в папке 
+с домашними заданиями. */
+
+body > div > div > div {
+  font-family: "Kosugi";
+  font-weight: 600;
+  text-align: center;
+  padding: 5px;
+  width: 150px;
+  margin: 3px;
+  border: 2px solid #355c8b;
+  display: inline-block;
+}
+.allCol > div {
+  height: 200px;
+}
+
+.conteiner {
+  width: 530px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#header1 {
+  background-color: #994601;
+}
+#header2 {
+  background-color: #789439;
+}
+#header3 {
+  background-color: #346093;
+}
+#col1 {
+  background-color: #fac191;
+}
+#col2 {
+  background-color: #c4d79c;
+}
+#col3 {
+  background-color: #96b4d8;
+}

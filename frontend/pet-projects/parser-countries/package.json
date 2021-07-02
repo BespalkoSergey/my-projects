@@ -1,0 +1,16 @@
+{
+  "name": "select",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1"
+  }
+}

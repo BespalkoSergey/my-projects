@@ -1,0 +1,105 @@
+h1 {
+  text-align: center;
+  color: yellow;
+}
+#p1::first-letter {
+  font-size: 18pt;
+  color: greenyellow;
+}
+#p1::selection {
+  background-color: coral;
+  color: white;
+}
+
+.p_2 > h2 {
+  text-align: center;
+  font-family: "Ruslan Display";
+}
+#p2::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 100%;
+  margin-right: 7px;
+}
+#p2 {
+  font-family: "Ruslan Display";
+}
+span::after {
+  content: " \260E";
+}
+.tbl {
+  font-family: "Caveat";
+  font-size: 27px;
+  margin-left: 60px;
+}
+
+td {
+  padding: 9px 8px;
+}
+
+tr:nth-child(1) td:nth-child(1):hover {
+  color: blue;
+}
+tr:nth-child(1) td:nth-child(2):hover {
+  color: blue;
+}
+tr:nth-child(1) td:nth-child(3):hover {
+  color: blue;
+}
+tr:nth-child(2) td:nth-child(1):hover {
+  color: blue;
+}
+tr:nth-child(2) td:nth-child(2):hover {
+  color: blue;
+}
+tr:nth-child(2) td:nth-child(3):hover {
+  color: blue;
+}
+tr:nth-child(3) td:nth-child(1):hover {
+  color: blue;
+}
+tr:nth-child(3) td:nth-child(2):hover {
+  color: blue;
+}
+tr:nth-child(3) td:nth-child(3):hover {
+  color: blue;
+}
+td:empty:hover {
+  background-color: aqua;
+  border-radius: 100%;
+}
+ul {
+  width: 300px;
+}
+li {
+  list-style: none;
+  padding: 7px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, white, gray);
+  box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, 0.1),
+    -2px -2px 5px 0 rgba(0, 0, 0, 0.1), 2px 2px 5px 0 rgba(0, 0, 0, 0.1),
+    -2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+}
+.OS {
+  font-family: "Lobster";
+}
+a {
+  text-decoration: none;
+  color: rgb(128, 113, 72);
+}
+div > h2 {
+  padding-left: 55px;
+  color: rgb(128, 0, 0);
+}
+img {
+  height: 30px;
+  position: absolute;
+  right: 3px;
+}

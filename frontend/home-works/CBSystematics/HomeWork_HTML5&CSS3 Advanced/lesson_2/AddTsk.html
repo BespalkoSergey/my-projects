@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddTsk</title>
+  </head>
+  <body>
+    <canvas
+      width="400"
+      height="400"
+      style="border: 1px solid lightgray;"
+    ></canvas>
+    <script>
+      const canvas = document.querySelector("canvas").getContext("2d");
+      const step = 10;
+      const end = 100;
+      canvas.save();
+      canvas.translate(150, 50);
+      canvas.beginPath();
+      for (let position = step; position < end; position += step) {
+        canvas.moveTo(position, end);
+        canvas.lineTo(position, end * 2);
+        canvas.moveTo(0, position + end);
+        canvas.lineTo(end, position + end);
+      }
+      canvas.stroke();
+      canvas.restore();
+    </script>
+  </body>
+</html>

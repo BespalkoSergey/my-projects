@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+  font-size: 15px;
+}
+section {
+  max-width: 360px;
+  max-height: 380px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - 225px);
+}
+fieldset {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+legend {
+  padding: 0 20px;
+  margin: 0 20px;
+  color: rgb(5, 52, 96);
+  font-weight: bold;
+}
+input {
+  margin-right: 30px;
+  margin-left: 30px;
+  background-color: rgb(240, 240, 240);
+}
+label {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: right;
+}
+select {
+  width: 186px;
+  height: 23px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+#button {
+  user-select: none;
+  cursor: pointer;
+  padding-top: 8px;
+  text-align: center;
+  height: 35px;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 255, 255, 1);
+  transition: 0.5s ease-in-out;
+  outline: none;
+}
+#button:hover {
+  padding-top: 4px;
+  font-size: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 255, 255, 1);
+}
+#button:active {
+  padding-top: 8px;
+  font-size: 15px;
+  transition: 0.08s ease-in-out;
+  box-shadow: 0px 0px 5px 0px rgba(0, 255, 255, 1);
+}

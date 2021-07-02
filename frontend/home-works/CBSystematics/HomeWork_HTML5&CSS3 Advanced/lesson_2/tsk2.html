@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      width="400"
+      height="400"
+      style="border: 1px solid lightgray;"
+    ></canvas>
+    <script>
+      const canvas = document.querySelector("canvas").getContext("2d");
+      canvas.save();
+      canvas.translate(100, 90);
+      canvas.beginPath();
+      canvas.fillStyle = "red";
+      canvas.moveTo(10, 30);
+      canvas.bezierCurveTo(100, 80, 100, 10, 200, 30);
+      canvas.lineTo(200, 150);
+      canvas.bezierCurveTo(100, 110, 100, 190, 10, 150);
+      canvas.fill();
+      canvas.closePath();
+      canvas.beginPath();
+      canvas.fillStyle = "white";
+      canvas.moveTo(60, 49);
+      canvas.bezierCurveTo(100, 50, 100, 35, 150, 28);
+      canvas.lineTo(150, 138);
+      canvas.bezierCurveTo(100, 139, 100, 160, 60, 160);
+      canvas.fill();
+      canvas.closePath();
+      canvas.beginPath();
+      canvas.fillStyle = "red";
+      canvas.moveTo(100, 80);
+      canvas.lineTo(100, 60);
+      canvas.lineTo(110, 60);
+      canvas.lineTo(110, 80);
+      canvas.lineTo(120, 65);
+      canvas.lineTo(130, 75);
+      canvas.lineTo(120, 90);
+      canvas.lineTo(125, 95);
+      canvas.lineTo(108, 93);
+      canvas.lineTo(108, 103);
+      canvas.lineTo(103, 103);
+      canvas.lineTo(103, 93);
+      canvas.lineTo(86, 95);
+      canvas.lineTo(91, 90);
+      canvas.lineTo(80, 75);
+      canvas.lineTo(90, 65);
+      canvas.fill();
+      canvas.closePath();
+      canvas.restore();
+    </script>
+  </body>
+</html>

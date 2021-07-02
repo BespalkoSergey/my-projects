@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        outline: none;
+      }
+      section {
+        overflow: hidden;
+      }
+      .Bar > div {
+        width: 100px;
+        float: left;
+      }
+
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      select {
+        width: 100px;
+        height: 36px;
+        border: 3px inset;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      input {
+        width: 50px;
+        height: 30px;
+        border: 3px inset;
+      }
+      button {
+        margin-left: -5px;
+        height: 38px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="Bar clearfix">
+        <div class="selectColor">
+          <select name="backgroundColor">
+            <option value="" disabled selected>Select color</option>
+            <option value="#008000">Green</option>
+            <option value="#ff0000">Red</option>
+            <option value="#0000ff">Blue</option>
+          </select>
+        </div>
+        <div class="fontSize">
+          <input type="text" placeholder="Size" />
+          <button>Set</button>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil animi
+        accusantium velit optio, itaque ut esse. Vel eligendi, sint sapiente,
+        cupiditate eos odio deserunt illo mollitia numquam voluptatem, autem
+        nihil! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Doloremque delectus quasi fuga hic magnam sed labore quam amet, quod,
+        velit error ipsa nulla modi officia iste distinctio atque fugiat eos!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        maiores ipsum provident eos rem. Velit quod nemo distinctio at
+        perspiciatis molestiae illo similique corporis assumenda temporibus
+        atque facere, cumque in? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Culpa debitis voluptatibus maiores quam? Voluptatibus
+        voluptates qui amet voluptas earum facilis rem ipsa officiis,
+        voluptatum, fuga harum cum! Modi, reiciendis iste?
+      </p>
+    </section>
+    <script>
+      function $(selector) {
+        return document.querySelector(selector);
+      }
+      let select = $("select");
+      let input = $("input");
+      let button = $("button");
+      let body = $("body");
+      let p = $("p");
+      let flag = false;
+      button.addEventListener("click", function () {
+        flag = true;
+        body.style.backgroundColor = select.value;
+        p.style.fontSize = `${parseInt(input.value)}px`;
+        window.localStorage.bckClr = select.value;
+        window.localStorage.fntSz = input.value;
+        window.localStorage.flag = flag;
+      });
+      window.addEventListener("load", function () {
+        let bckClr = window.localStorage.bckClr;
+        let fntSz = window.localStorage.fntSz;
+        let ckFlg = window.localStorage.flag;
+        if (ckFlg == "true") {
+          input.value = fntSz;
+          select.value = bckClr;
+          body.style.backgroundColor = select.value;
+          p.style.fontSize = `${parseInt(input.value)}px`;
+        }
+      });
+    </script>
+  </body>
+</html>

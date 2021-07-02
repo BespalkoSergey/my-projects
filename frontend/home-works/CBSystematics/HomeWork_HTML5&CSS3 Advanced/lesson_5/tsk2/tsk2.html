@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI";
+        color: lightgray;
+        user-select: none;
+        outline: none;
+      }
+      .menu {
+        width: 100vw;
+        background-color: black;
+        display: flex;
+      }
+      .menu *:hover {
+        background-color: rgba(31, 31, 31, 0.932);
+      }
+      .menu__item,
+      .drop__item {
+        list-style: none;
+        height: 100%;
+        width: 100%;
+      }
+      .menu a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        height: 3em;
+        line-height: 3em;
+      }
+      .menu__item {
+        position: relative;
+      }
+      .menu__item + .menu__item {
+        margin-left: 30px;
+      }
+      .menu__drop {
+        position: absolute;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.8s ease-in;
+      }
+      .drop__item {
+        background-color: black;
+      }
+      .drop__item + .drop__item {
+        border-top: 1px solid rgba(128, 128, 128, 0.473);
+      }
+      .menu__item:hover .menu__drop {
+        animation: drop 0.8s ease-in forwards;
+      }
+      @keyframes drop {
+        from {
+          max-height: 0px;
+        }
+        to {
+          max-height: 100rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#">Пункт 1</a>
+          <ul class="menu__drop">
+            <li class="drop__item"><a href="">Подпункт 1</a></li>
+            <li class="drop__item"><a href="">Подпункт 2</a></li>
+            <li class="drop__item"><a href="">Подпункт 3</a></li>
+            <li class="drop__item"><a href="">Подпункт 4</a></li>
+            <li class="drop__item"><a href="">Подпункт 5</a></li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#">Пункт 2</a>
+          <ul class="menu__drop">
+            <li class="drop__item"><a href="">Подпункт 1</a></li>
+            <li class="drop__item"><a href="">Подпункт 2</a></li>
+            <li class="drop__item"><a href="">Подпункт 3</a></li>
+            <li class="drop__item"><a href="">Подпункт 4</a></li>
+            <li class="drop__item"><a href="">Подпункт 5</a></li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#">Пункт 3</a>
+          <ul class="menu__drop">
+            <li class="drop__item"><a href="">Подпункт 1</a></li>
+            <li class="drop__item"><a href="">Подпункт 2</a></li>
+            <li class="drop__item"><a href="">Подпункт 3</a></li>
+            <li class="drop__item"><a href="">Подпункт 4</a></li>
+            <li class="drop__item"><a href="">Подпункт 5</a></li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#">Пункт 4</a>
+          <ul class="menu__drop">
+            <li class="drop__item"><a href="">Подпункт 1</a></li>
+            <li class="drop__item"><a href="">Подпункт 2</a></li>
+            <li class="drop__item"><a href="">Подпункт 3</a></li>
+            <li class="drop__item"><a href="">Подпункт 4</a></li>
+            <li class="drop__item"><a href="">Подпункт 5</a></li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#">Пункт 5</a>
+          <ul class="menu__drop">
+            <li class="drop__item"><a href="">Подпункт 1</a></li>
+            <li class="drop__item"><a href="">Подпункт 2</a></li>
+            <li class="drop__item"><a href="">Подпункт 3</a></li>
+            <li class="drop__item"><a href="">Подпункт 4</a></li>
+            <li class="drop__item"><a href="">Подпункт 5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

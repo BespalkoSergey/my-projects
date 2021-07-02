@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+        outline: none;
+      }
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+      }
+      .item {
+        position: relative;
+      }
+      [class^="item__dot"] {
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        animation: pulsar 0.4s ease-in-out infinite alternate forwards;
+      }
+      [class^="item__dot"]:hover {
+        animation-play-state: paused;
+      }
+      .item__dot_1 {
+        top: 182px;
+        left: 437px;
+      }
+      .item__dot_2 {
+        top: 57px;
+        left: 484px;
+      }
+      .item__dot_3 {
+        top: 474px;
+        left: 94px;
+      }
+      .item__dot_4 {
+        top: 370px;
+        left: 108px;
+      }
+      .item__ticket {
+        position: absolute;
+        width: 100px;
+        top: 9px;
+        left: 9px;
+        max-height: 0rem;
+        overflow: hidden;
+        border-radius: 4px;
+        background-color: lightgray;
+      }
+      [class^="item__dot"]:hover .item__ticket {
+        animation: ticket__activ 1s linear forwards;
+      }
+      .item__ticket h6 {
+        color: #c0392b;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 4px;
+      }
+      .item__ticket button {
+        display: block;
+        max-width: 100px;
+        margin: 0 auto;
+        margin-bottom: 4px;
+        border: 2px solid #55efc4;
+        background-color: #636e72;
+        border-radius: 4px;
+        padding: 4px 4px;
+        color: #00b894;
+      }
+      @keyframes pulsar {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: rgba(255, 0, 0, 0.384);
+        }
+      }
+      @keyframes ticket__activ {
+        from {
+          max-height: 0rem;
+        }
+        to {
+          max-height: 10rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item">
+        <img class="item__img" src="1.jpg" alt="Persia" />
+        <div class="item__dot_1">
+          <div class="item__ticket">
+            <h6>Купить билеты</h6>
+            <button>Купить</button>
+          </div>
+        </div>
+        <div class="item__dot_2">
+          <div class="item__ticket">
+            <h6>Купить билеты</h6>
+            <button>Купить</button>
+          </div>
+        </div>
+        <div class="item__dot_3">
+          <div class="item__ticket">
+            <h6>Купить билеты</h6>
+            <button>Купить</button>
+          </div>
+        </div>
+        <div class="item__dot_4">
+          <div class="item__ticket">
+            <h6>Купить билеты</h6>
+            <button>Купить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

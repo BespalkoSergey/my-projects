@@ -1,0 +1,53 @@
+// Задание 2 -------------------------------
+document.write("Задание 2 <br/>");
+let x = 6;
+let y = 15;
+let z = 4;
+let res;
+res = x += y - x++ * z;
+document.write("x += y - x++ * z  = " + res + "<br />");
+res = z = --x - y * 5;
+document.write("z = -- x - y * 5  = " + res + "<br />");
+res = y /= x + (5 % z);
+document.write("y /= x + 5 % z  = " + res + "<br />");
+res = z = x++ + y * 5;
+document.write("z = x++ + y * 5  = " + res + "<br />");
+res = x = y - x++ * z;
+document.write("x = y - x++ * z  = " + res + "<br/> <hr>");
+// Задание 3 --------------------------------
+document.write("Задание 3 <br/>");
+let a = 5;
+let b = 6;
+let c = 7;
+res = (a + b + c) / 3;
+document.write("a=" + a + "<br/>b=" + b + "<br/>c=" + c + "<br/>Ср.Арф.=" + res + "<br/> <hr/>");
+// Задание 4 --------------------------------
+document.write("Задание 4 <br/>");
+let pi = 3.14;
+let r = parseInt(prompt("Введите радиус цилиндра", 0));
+let h = parseInt(prompt("Введите высоту цилиндра", 0));
+let V = pi * r * r * h;
+let S = 2 * pi * r * (h + r);
+document.write("V = " + V + "<br/>");
+document.write("S = " + S + "<br/> <hr>");
+// Дополнительное задание -------------------
+document.write("Доп.Задание <br/>");
+let operandX = 3;
+let operandY = 2;
+let operandZ;
+document.write("Сложение (+): 3+2= " + (operandX + operandY) + "<br/>");
+document.write("Вычитание (-): 3-2= " + (operandX - operandY) + "<br/>");
+document.write("Деление (/): 3/2= " + operandX / operandY + "<br/>");
+document.write("Умножение (*): 3*2= " + operandX * operandY + "<br/>");
+document.write("Остаток от деления (%): 3%2= " + (operandX % operandY) + "<br/>");
+document.write("Возведение в степень (**): 3**2= " + operandX ** operandY + "<br/>");
+operandY++;
+document.write('Инкремент (++): "2++"= ' + operandY + "<br/>");
+operandY = 2;
+operandY--;
+document.write('Декремент (--): "2--"= ' + operandY + "<br/>");
+operandY = 2;
+operandZ = -operandY;
+document.write("Унарный минус (-operandY): = " + operandZ + "<br/>");
+operandY = +"2";
+document.write('Унарный плюс (+): +"2"= ' + typeof operandY + "<br/>");

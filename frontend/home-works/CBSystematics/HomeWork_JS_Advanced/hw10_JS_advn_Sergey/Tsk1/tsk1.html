@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Введите А" />
+    <input type="text" placeholder="Введите B" />
+    <input id="output" type="text" placeholder="Ответ" />
+    <button>Получить ответ</button>
+    <script>
+      let btn = document.querySelector("button");
+      let inputs = document.querySelectorAll("input");
+      let output = document.querySelector("#output");
+
+      inputs[0].addEventListener("keypress", function (e) {
+        if (!/\d/.test(String.fromCharCode(e.charCode))) {
+          e.preventDefault();
+        }
+      });
+      inputs[1].addEventListener("keypress", function (e) {
+        if (!/\d/.test(String.fromCharCode(e.charCode))) {
+          e.preventDefault();
+        }
+      });
+
+      function getResolveXML() {
+        let xhr = new XMLHttpRequest();
+        let url = "CalcHandler.ashx";
+        let valueA = parseInt(inputs[0].value);
+        let valueB = parseInt(inputs[1].value);
+        xhr.open("POST", url);
+
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            output.value = "POST " + xhr.responseText;
+          }
+        };
+
+        xhr.send("a=" + valueA + "&b=" + valueB);
+      }
+      btn.addEventListener("click", getResolveXML);
+
+      function getResolveFetch() {
+        let valueA = parseInt(inputs[0].value);
+        let valueB = parseInt(inputs[1].value);
+        let url = "CalcHandler.ashx";
+        let option = {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `a=${valueA}&b=${valueB}`,
+        };
+        fetch(url, option).then((data) => {
+          output.value = "POST " + data.text();
+        });
+      }
+      // btn.addEventListener("click", getResolveFetch);
+    </script>
+  </body>
+</html>

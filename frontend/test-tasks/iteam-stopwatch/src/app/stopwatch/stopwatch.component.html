@@ -1,0 +1,16 @@
+<div class="stoptwtch bg-info p-3 rounded-lg">
+
+    <p class="outer text-center p-4" [ngClass]="{'text-danger': isDisabledStartBtn}" style="font-size: 32px;">
+        {{ outer }}
+    </p>
+
+    <div class="btn-group" role="group" aria-label="Naigation">
+        <button type="button" class="btn btn-secondary" #startBtn [disabled]="start === state"
+            (click)="onClick(start)">{{ start }}</button>
+        <button type="button" class="btn btn-secondary" #waitBtn (click)="onClick(wait)">{{ wait }}</button>
+        <button type="button" class="btn btn-secondary" #stopBtn [disabled]="stop === state"
+            (click)="onClick(stop)">{{ stop }}</button>
+        <button type="button" class="btn btn-secondary" #resetBtn [disabled]="!isDisabledStartBtn"
+            (click)="onClick(reset)">{{ reset }}</button>
+    </div>
+</div>

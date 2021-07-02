@@ -1,0 +1,38 @@
+/* Задание 2
+Сверстайте структуру HTML страницы по шаблону block в папке 
+с домашним заданием. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  font-weight: bold;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(100, 202, 203);
+}
+.navigation {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(250, 151, 148);
+}
+.menu {
+  width: 20%;
+  height: 530px;
+  background-color: rgb(155, 202, 156);
+  float: left;
+}
+.content {
+  width: 100%;
+  height: 530px;
+  background-color: rgb(204, 207, 208);
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(4, 102, 252);
+}

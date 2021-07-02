@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link id="link" rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <input class="smallFontSize" type="text" placeholder="Введите число" />
+        <div id="outN1" class="normalFontSize"></div>
+        <input class="smallFontSize" type="text" placeholder="Введите число" />
+        <div id="outN2" class="smallFontSize"></div>
+      </div>
+      <div class="buttons">
+        <button id="+">+</button>
+        <button id="-">-</button>
+        <button id="*">*</button>
+        <button id="/">/</button>
+      </div>
+    </div>
+
+    <script src="js/commonPart.js"></script>
+    <script src="js/addTsk.js"></script>
+    <script src="js/tsk1.js"></script>
+    <script src="js/intExp.js"></script>
+
+    <!-- По очереди раскомментируйте содержимое <script> -->
+    <!-- Решение HW5 Дополнитеное задание -->
+    <script>
+      // eventAnnouncementDOMl0(); //<------- DOM level: 0;
+      // eventAnnouncementDOMl2(); //<------- DOM level: 2;
+    </script>
+
+    <!-- Решение HW5 Задание №1 -->
+    <script>
+      // eventDOMl2Task1(); //<------- Добавленна проверка на ввод;
+    </script>
+
+    <!-- Решение HW5 Task2 задачи -->
+    
+    <script>
+      // /* Ключи проверки*/
+      // var addEvntLis = function () {
+      //   if (window.addEventListener) {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      // };
+      // var attachEvnt = function () {
+      //   if (window.attachEvent) {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      // };
+      // var mssTream = function () {
+      //   if (!!window.MSStream) {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      // };
+
+      // var link = document.getElementById("link");
+
+      // if (addEvntLis() && mssTream() && attachEvnt() == false) {
+      //   /* функционал 11 версии*/
+      //   gettingResultForIE11();
+      // }
+      // if (attachEvnt()) {
+      //   /* функционал IE 5 - 10 */
+      //   gettingResultForIE5_10();
+      //   if (!mssTream()) {
+      //     /* поменять стиль до IntExp10 */
+      //     link.href = "css/ie5_9.css";
+      //   }
+      // }
+      // if (!mssTream()) {
+      //   /* функционал для opera firefox chrome */
+      //   eventDOMl2Task1();
+      // } 
+    </script>
+  </body>
+</html>

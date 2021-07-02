@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        width: 75px;
+        margin: 5px;
+      }
+      .big {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img
+        src="https://cdn.fishki.net/upload/post/201602/05/1839329/d49a6d9faff96189c76d5c90134b58ad.jpg"
+        alt="Сандро Боттичелли «Рождение Венеры» 1486."
+      />
+      <img
+        src="https://cdn.fishki.net/upload/post/201602/05/1839329/280b776160a47e863f3c7f95d35051dd.jpg"
+        alt="Леонардо да Винчи «Мадонна Литта» 1491."
+      />
+      <img
+        src="https://cdn.fishki.net/upload/post/201602/05/1839329/6ffb75d5c3362d05ba1a8e34939673df.jpg"
+        alt="Рафаэль Санти. Секстинская мадонна, 1512."
+      />
+      <img
+        src="https://cdn.fishki.net/upload/post/201602/05/1839329/2756db27ff526d155aac7f356c0cc859.jpg"
+        alt="Тициан «Любовь земная и Любовь небесная», 1515–1516."
+      />
+    </section>
+    <script>
+      let img = document.querySelectorAll("img");
+      let temp;
+
+      document.addEventListener("click", function (e) {
+        let big = document.querySelectorAll(".big");
+        let obj = e.target;
+
+        if (obj.tagName == "IMG") {
+          big.forEach((e) => {
+            if (e.classList.contains("big")) {
+              e.classList.remove("big");
+            }
+          });
+          obj.classList.add("big");
+        }
+      });
+    </script>
+  </body>
+</html>

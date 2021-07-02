@@ -1,0 +1,19 @@
+<div class="row m-0" style="width: 100vw;" *ngIf="arr">
+  <div
+    class="col-md-6 col-lg-4 col-xl-3 mt-2"
+    *ngFor="let item of arr; let i = index"
+  >
+    <div class="card">
+      <div class="card-body d-flex justify-content-between">
+        <h5 class="card-title">{{ item }}</h5>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteGenre($event.target)"
+        >
+          УДАЛИТЬ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

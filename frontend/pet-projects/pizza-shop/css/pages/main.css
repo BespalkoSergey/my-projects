@@ -1,0 +1,26 @@
+.main-page-main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-img {
+  width: 100vw;
+}
+.main-header {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - 150px);
+}
+.main-h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 90px;
+}
+.main-p {
+  text-align: center;
+  font-size: 19px;
+}

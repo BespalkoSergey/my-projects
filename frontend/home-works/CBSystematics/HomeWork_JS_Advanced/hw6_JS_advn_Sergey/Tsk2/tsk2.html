@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        overflow: auto;
+      }
+      div {
+        height: 150px;
+        width: 250px;
+        float: left;
+      }
+      .clearfix:before,
+      .clearfix:after {
+        content: "";
+        display: table;
+      }
+
+      .clearfix:after {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="clearfix">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et
+        sunt autem odio cumque tempore quisquam voluptates nobis. Quod sunt
+        explicabo provident illum accusamus pariatur natus doloribus, numquam
+        enim culpa!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et
+        sunt autem odio cumque tempore quisquam voluptates nobis. Quod sunt
+        explicabo provident illum accusamus pariatur natus doloribus, numquam
+        enim culpa!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et
+        sunt autem odio cumque tempore quisquam voluptates nobis. Quod sunt
+        explicabo provident illum accusamus pariatur natus doloribus, numquam
+        enim culpa!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, et
+        sunt autem odio cumque tempore quisquam voluptates nobis. Quod sunt
+        explicabo provident illum accusamus pariatur natus doloribus, numquam
+        enim culpa!
+      </div>
+    </section>
+    <script>
+      let section = document.querySelector("section");
+      document.addEventListener(
+        "keydown",
+        function (e) {
+          let key = e.key;
+          switch (key) {
+            case "r":
+              section.style.backgroundColor = "rgb(255, 0, 0)";
+              break;
+            case "g":
+              section.style.backgroundColor = "rgb(0, 255, 0)";
+              break;
+            case "b":
+              section.style.backgroundColor = "rgb(0, 0, 255)";
+              break;
+
+            default:
+              alert("Необходимо нажимать только клавиши r , g , b");
+              break;
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

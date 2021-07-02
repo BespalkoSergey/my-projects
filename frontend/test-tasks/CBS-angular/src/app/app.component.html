@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col p-0">
+      <ul ngbNav #nav="ngbNav" class="nav-tabs bg-primary p-3">
+        <li ngbNavItem>
+          <a class="p-2" ngbNavLink>Авторы</a>
+          <ng-template ngbNavContent><app-author></app-author></ng-template>
+        </li>
+        <li ngbNavItem>
+          <a class="p-2" ngbNavLink>Жанры</a>
+          <ng-template ngbNavContent><app-genre></app-genre></ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav"></div>
+    </div>
+  </div>
+</div>

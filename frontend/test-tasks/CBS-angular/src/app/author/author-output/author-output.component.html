@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col" *ngIf="show === 'all'">
+    <app-output-all-authors></app-output-all-authors>
+  </div>
+  <div class="col" *ngIf="show === 'edit'">
+    <app-output-edit></app-output-edit>
+  </div>
+  <div class="col" *ngIf="show === 'show'">
+    <app-output-show></app-output-show>
+  </div>
+</div>

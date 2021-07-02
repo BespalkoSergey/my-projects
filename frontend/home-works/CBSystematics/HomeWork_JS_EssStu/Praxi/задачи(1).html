@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Задача 3
+
+      // есть массив в котором числа например
+      const arr1 = [2, 4, 6, 8, 10];
+      const arr2 = [2, 4, 6, 8, 9, 10];
+      // переменная ответа
+      let result = false;
+      // прописать логику в котором идет проверка на наличие не четных чисел
+
+      // console.log(false) в случае проверки arr1 (нет, ни одно не четного числа в массиве)
+      // console.log(true) в случае проверки arr2 (да, хотя бы одно число в массиве не четное)
+
+      function findValue(array) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] % 2) {
+            result = true;
+
+            break;
+          }
+        }
+        console.log(result);
+      }
+      //    findValue(arr1); //<----
+      //   findValue(arr2); //<----
+
+      //----------------------------------------------------------
+
+      // Задача 4
+
+      // Есть массив и число в переменной 'N'
+      // Число 'N' это индекс элемента с которого нужно взять число, а потом взятое число умножить на 'N' раз
+
+      var arr = [4, 2, 3, 5, 2];
+      var N = 0;
+      // если N = 2 тогда
+      // 3 * 3
+      // console.log(9);
+
+      // если N = 3 тогда
+      // 5 * 5 * 5
+      // console.log(125);
+
+      // если N = 4 тогда
+      // 2 * 2 * 2 * 2
+      // console.log(16);
+
+      function multiplyArrayValue(array, multiplier) {
+        let result = "";
+        if (N == 0) {
+          result += `${array[multiplier]}^${multiplier}`;
+        }
+        console.log(`N=${multiplier}`);
+        console.log(`array[N]=${array[multiplier]}`);
+        for (let i = 0; i < N; i++) {
+          if (i == N - 1) {
+            result += `${array[multiplier]}`;
+            break;
+          }
+          result += `${array[multiplier]}*`;
+        }
+        result += `=${Math.pow(array[multiplier], multiplier)}`;
+        console.log(result);
+      }
+      //   multiplyArrayValue(arr, N);    //<-----
+
+      //----------------------------------------------------------
+
+      // Задача 5
+
+      // Есть массив чисел например [-3, 5] или [2,9], нужно заполнить пропущенные значения между цифрами.
+      // Результат [-3,-2,-1,0,1,2,3,4,5], [2,3,4,5,6,7,8,9];
+      // 5.1 Пропишите вывод текста при случии если первое значение больше второго и код не работает
+
+      let arrTsk5_1 = [3, 5];
+      let arrTsk5_2 = [2, 9];
+
+      function creatingSpaceNumbers(array) {
+        let start = array[0];
+        let stop = array[array.length - 1];
+        let newArray = [];
+        if (start > stop) {
+          console.log("а вы хитрец");
+        } else {
+          for (let i = start; i <= stop; i++) {
+            newArray.push(i);
+          }
+          console.log(newArray);
+        }
+      }
+
+      //   creatingSpaceNumbers(arrTsk5_1); //<-------
+      //   creatingSpaceNumbers(arrTsk5_2); //<-------
+
+      // 5.2 Убрав реализацию описания пункта выше (5.1) пропишите логику на оба варианта получения чисел, просто в случае [4, -1] результатом будет 4,3,2,1,0,-1 (можно прописать и на оборот -1,0,1,2,3,4)
+
+      function oppositeSpaceNumbers(array) {
+        let start = array[0];
+        let stop = array[array.length - 1];
+        let newArray = [];
+        if (start > stop) {
+          for (let i = stop; i <= start; i++) {
+            newArray.push(i);
+          }
+        } else {
+          for (let i = start; i <= stop; i++) {
+            newArray.push(i);
+          }
+        }
+        console.log(newArray);
+      }
+
+      //   oppositeSpaceNumbers(arrTsk5_1); //<------
+
+      //----------------------------------------------------------
+
+      // Задача 6
+
+      // 6.1 Написать функцию в которую возможно передать любое количество чисел и эта функция возращает сумму этих всех чисел.
+      // 6.2 Все тоже самое но с умножением (помним по умножить на ноль), в таком случае программа ноль игнорирует и не превращает результат в 0
+
+      function sum() {
+        let result = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          result += arguments[i];
+        }
+        console.log(result);
+      }
+
+      //   sum(2, 3, 0, 4, 0); //<-------
+
+      function mul() {
+        let result = 1;
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] != 0) {
+            result *= arguments[i];
+          }
+        }
+        console.log(result);
+      }
+
+      //   mul(2, 3, 0, 4, 0); //<-------
+
+      //----------------------------------------------------------
+
+      // Задача 7
+
+      let arr3 = [
+        [4, -6, 22, 2],
+        [8, 34, -12, 4],
+        [6, 3, 21, 56],
+        [-2, -33, 44, 1]
+      ];
+
+      // Смотря на индекс родительского масива доставать количество элементов дочернего
+      // результат выдода в console.log
+      //ничего
+      //8
+      //6,3
+      //-2,-33,44
+
+      function valueOutput(array) {
+        let result;
+        for (let i = 0; i < array.length; i++) {
+          result = "";
+          for (let j = 0; j < i; j++) {
+            result += ` ${array[i][j]}`;
+          }
+          console.log(result);
+        }
+      }
+      // valueOutput(arr3); //<-------
+
+      //Задача со звездочкой
+
+      // 120 квартир поъезда (по 30 квартир) 6 этажей по 5-ть квартир на этаже
+      // вводим номер квартиры получаем ответ в каком парадном она находится
+      // вводим номер квартиры получаем ответ в каком парадном и этаж где она находится
+      let arrayFlats = [];
+
+      function findFlat() {
+        let flats = 1;
+        for (let house = 0; house <= 3; house++) {
+          arrayFlats[house] = [];
+          for (let floor = 0; floor <= 5; floor++) {
+            arrayFlats[house][floor] = [];
+            for (let floorFlats = 0; floorFlats <= 4; floorFlats++) {
+              arrayFlats[house][floor].push(flats);
+              flats++;
+            }
+          }
+        }
+        console.log(arrayFlats);
+
+        let numberFlat = +prompt("Введите номер квартиры");
+        if (1 < numberFlat && numberFlat < 120) {
+          let flag = false;
+          if (flag != true) {
+            for (let house = 0; house <= 3; house++) {
+              if (flag != true) {
+                for (let floor = 0; floor <= 5; floor++) {
+                  if (flag != true) {
+                    for (let floorFlats = 0; floorFlats <= 4; floorFlats++) {
+                      if (flag != true) {
+                        if (
+                          arrayFlats[house][floor][floorFlats] == numberFlat
+                        ) {
+                          console.log(
+                            `Дом под номером:${house +
+                              1}; Этаж под номером:${floor + 1};`
+                          );
+                          flag = true;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          console.log(
+            "У нас маленьный квартал такой квартиры не будет введите от 1 до 120"
+          );
+        }
+      }
+
+    //   findFlat(); //<-----
+    </script>
+  </body>
+</html>

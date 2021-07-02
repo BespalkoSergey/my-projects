@@ -1,0 +1,13 @@
+section::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+}
+div {
+  width: 22%;
+  display: inline-block;
+  margin: 5px;
+}
+img {
+  width: 100%;
+}

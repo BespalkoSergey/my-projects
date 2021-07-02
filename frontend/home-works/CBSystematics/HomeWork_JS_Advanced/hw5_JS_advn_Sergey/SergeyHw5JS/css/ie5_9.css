@@ -1,0 +1,43 @@
+input,
+#outN1,
+#outN2 {
+  float: left;
+  height: 40px;
+  width: 100px;
+  margin-left: 4px;
+  border: 1px solid rgb(224, 224, 244);
+  text-align: center;
+}
+.display {
+  width: 430px;
+}
+.container {
+  margin-top: 15%;
+  margin-left: 35%;
+  padding-top: 7px;
+  height: 100px;
+  width: 432px;
+  background: rgb(214, 214, 214);
+}
+.buttons {
+  margin-left: 66px;
+  width: 310px;
+}
+
+button {
+  height: 40px;
+  width: 60px;
+  margin: 5px;
+  background: rgb(130, 130, 255);
+  border: none;
+  outline: none;
+  font-size: 30px;
+}
+
+.smallFontSize {
+  font-size: 13px;
+}
+
+.normalFontSize {
+  font-size: 30px;
+}

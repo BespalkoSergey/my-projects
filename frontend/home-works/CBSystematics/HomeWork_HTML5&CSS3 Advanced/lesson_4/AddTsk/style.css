@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  width: calc(100vw - 16px);
+  overflow-x: hidden;
+}
+header {
+  height: 300px;
+  width: 100%;
+  background: url("img/192.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.info {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 70px;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.info p {
+  margin-left: 3px;
+}
+.info p span {
+  color: rgb(139, 15, 15);
+  font-weight: 700;
+}
+.info button {
+  background-color: rgb(139, 15, 15);
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  width: 100px;
+  height: 30px;
+  margin-right: 3px;
+  color: white;
+}
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+}
+section {
+  width: 66%;
+  height: 100%;
+}
+aside {
+  width: 33%;
+  min-height: 100%;
+  background-color: rgb(233, 222, 204);
+}
+.art__body {
+  margin-top: 10px;
+  display: flex;
+}
+.art__body p {
+  margin-left: 10px;
+}
+.mtp {
+  margin-top: 10px;
+}
+article {
+  margin-top: 25px;
+  margin-right: 20px;
+}
+article h5 {
+  font-weight: 400;
+}
+article img {
+  width: 280px;
+}
+.art__footer {
+  margin-top: 20px;
+  background-color: rgb(139, 13, 14);
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.art__footer p {
+  display: inline;
+  color: white;
+}
+.mlp {
+  margin-left: 16px;
+}
+fieldset {
+  border: none;
+}
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+form {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+legend {
+  color: rgb(139, 13, 14);
+  font-weight: 600;
+}
+sup {
+  color: rgb(139, 13, 14);
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.form__wrapper a {
+  color: rgb(139, 13, 14);
+  text-decoration: none;
+}
+.form__wrapper a:nth-child(1) {
+  margin-top: 30px;
+}
+.form__nav {
+  position: relative;
+}
+.form__nav h4 {
+  color: rgb(139, 13, 14);
+  margin-bottom: 4px;
+}
+.form__nav li {
+  margin-left: 20px;
+}
+.form__nav li:nth-child(1) {
+  list-style: none;
+}
+.form__nav li:nth-child(1)::before {
+  font-size: 12px;
+  content: "\27A4";
+  position: absolute;
+  top: 27px;
+  left: 1px;
+}
+.form__nav,
+.form__info,
+.inner {
+  width: 40%;
+  height: 145px;
+}
+.form__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+[type="submit"] {
+  margin-top: auto;
+  margin-bottom: 10px;
+  width: 55px;
+  height: 30px;
+  background-color: rgb(139, 13, 14);
+  border: none;
+  color: white;
+}

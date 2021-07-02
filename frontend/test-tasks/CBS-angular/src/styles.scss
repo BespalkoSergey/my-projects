@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap");
+body,
+button,
+input,
+select,
+label,
+a {
+  font-family: "Manrope", sans-serif !important;
+}

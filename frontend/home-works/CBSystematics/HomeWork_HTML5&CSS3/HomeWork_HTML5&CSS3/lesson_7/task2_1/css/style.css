@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  max-width: 360px;
+  max-height: 300px;
+  margin-top: 10%;
+  margin-right: auto;
+  margin-left: auto;
+}
+fieldset {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+legend {
+  padding: 0 20px;
+  margin: 0 20px;
+  color: rgb(5, 52, 96);
+  font-weight: bold;
+}
+input {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+label {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: right;
+}
+select {
+  width: 173px;
+  height: 23px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+fieldset:nth-child(1) label:nth-child(2),
+label:nth-last-child(1) {
+  font-weight: bold;
+}

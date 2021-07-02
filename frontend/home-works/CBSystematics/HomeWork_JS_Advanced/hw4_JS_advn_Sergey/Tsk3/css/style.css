@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  overflow: auto;
+  max-width: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - 80px);
+}
+
+.container > div {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+  float: left;
+}

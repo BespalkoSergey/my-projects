@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      input,
+      button {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <button>Save</button>
+    <script>
+      let body = document.querySelector("body");
+      let input = document.querySelector("input");
+      let button = document.querySelector("button");
+      let temp = "";
+
+      function closeAsk() {
+        window.onbeforeunload = function () {
+          return "Все ровно этот код не покажеться";
+        };
+      }
+
+      button.onclick = function () {
+        temp = input.value;
+        input.value = "";
+      };
+      input.onmouseleave = function (e) {
+        e.stopPropagation();
+      };
+      button.onmouseleave = function (e) {
+        e.stopPropagation();
+      };
+      body.onmouseleave = function () {
+        /* Если не сохроняли и пустая ячейка то не спрашиваем */
+        if (temp.length < 1 && input.value.length < 1) {
+          return 0;
+        }
+        /* Если сохроняли тоже не спрашиваем */
+        if (temp.length > 1) {
+          return 0;
+        }
+        /* Есле не сохроняли и input не пустой спрашиваем */
+        if (input.value.length > 1) {
+          closeAsk();
+        }
+      };
+    </script>
+  </body>
+</html>

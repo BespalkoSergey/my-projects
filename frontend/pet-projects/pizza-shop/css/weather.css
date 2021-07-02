@@ -1,0 +1,71 @@
+.weather {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(253, 246, 227, 0.747);
+  position: fixed;
+  top: 0;
+  right: 10%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 11px;
+}
+span[class^="data-weather"],
+img[class^="data-weather"] {
+  font-family: "Roboto", sans-serif;
+}
+img[class^="data-weather"] {
+  width: 16px;
+}
+
+.f-15 {
+  font-size: 15px;
+}
+
+.weather-data:nth-child(1) {
+  max-width: 30%;
+  margin: 0 auto;
+}
+.weather-data:nth-child(2) {
+  max-width: 20%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 15px;
+}
+.weather-data:nth-child(3) {
+  max-width: 20%;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 60px);
+}
+.weather-data:nth-child(4) {
+  max-width: 20%;
+  position: absolute;
+  left: 7px;
+  bottom: 0px;
+}
+.weather-data:nth-child(5) {
+  max-width: 20%;
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+}
+.weather-data:nth-child(6) {
+  max-width: 20%;
+  position: absolute;
+  right: 7px;
+  bottom: 17px;
+}
+.weather-data:nth-child(7) {
+  max-width: 20%;
+  position: absolute;
+  right: 30px;
+  bottom: 3px;
+}
+.weather-icon {
+  width: 25px;
+  position: absolute;
+  left: 14px;
+  top: 0px;
+}

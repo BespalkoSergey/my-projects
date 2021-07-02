@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="http://i.piccy.info/i9/a33733ef99a64be58b343b44bb6d2237/1587665315/15005/1364489/23.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- addTsk -->
+    <div class="container border border-warning">
+      <div class="row">
+        <div class="col bg-warning">
+          <h2 class="text-center">Дополнительное задание</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- addTsk 1 -->
+        <div class="col-4 p-5 border-right border-warning">
+          <form>
+            <div class="form-group">
+              <label for="emailInpt">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailInpt"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >Нам нужен ваш Email, для наших баз данных, мы их потом
+                продаем</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="pass">Пароль</label>
+              <input type="password" class="form-control" id="pass" />
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="remember" />
+              <label class="form-check-label" for="remember">Запомнить</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+        <!-- /addTsk 1-->
+        <!-- addTsk 2-->
+        <div
+          class="col-4 d-flex align-items-center justify-content-center p-5 border-right border-warning"
+        >
+          <div
+            id="group1"
+            class="btn-group"
+            role="group"
+            aria-label="alignButtons"
+          >
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-align-self="align-self-start"
+            >
+              Верх
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-align-self="align-self-center"
+            >
+              Центр
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-align-self="align-self-end"
+            >
+              Низ
+            </button>
+          </div>
+          <script>
+            document
+              .querySelector("#group1")
+              .addEventListener("click", function (e) {
+                e.target.offsetParent.classList.forEach((clss) => {
+                  if (clss.includes("align-self")) {
+                    e.target.offsetParent.classList.remove(clss);
+                  }
+                  e.target.offsetParent.classList.add(
+                    e.target.dataset.alignSelf
+                  );
+                });
+              });
+          </script>
+        </div>
+        <!-- /addTsk 2-->
+        <!-- addTsk 3-->
+        <div class="col-4 p-0">
+          <style>
+            a[data-href] {
+              transition: 0.4s ease-in-out;
+            }
+            .f2em {
+              font-size: 2em;
+            }
+          </style>
+          <nav
+            id="nav1"
+            class="navbar navbar-expand-sm bg-dark navbar-dark"
+            style="height: 56px;"
+          >
+            <!-- если поставить href="#" выводит ошибки поэтому и не поставил -->
+            <a href="" class="navbar-brend">
+              <img
+                src="http://d.zaix.ru/j2Ha.png"
+                alt="treble clef"
+                style="height: 40px;"
+              />
+            </a>
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-href="http://d.zaix.ru/j2Dh.mp3"
+                >
+                  Шопен
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-href="http://d.zaix.ru/j2ED.mp3"
+                  >Вагнер</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-href="http://d.zaix.ru/j2DV.mp3"
+                  >Моцарт</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center"
+            style="height: calc(100% - 56px);"
+          >
+            <h4>Нажмите на композитора</h4>
+            <audio controls>
+              <source id="src1" src="#" type="audio/mpeg" />
+            </audio>
+          </div>
+          <script>
+            let temp;
+            document
+              .querySelector("#nav1")
+              .addEventListener("click", function (e) {
+                let audio = document.querySelector("audio");
+                let source = document.querySelector("#src1");
+                if (temp) {
+                  temp.parentNode.classList.remove("active");
+                  temp.classList.remove("f2em");
+                }
+                temp = e.target;
+                temp.parentNode.classList.add("active");
+                temp.classList.add("f2em");
+                source.src = e.target.dataset.href;
+                audio.load();
+                audio.play();
+              });
+          </script>
+        </div>
+        <!-- /addTsk 3-->
+      </div>
+    </div>
+    <!-- /addTsk -->
+    <!-- Tsk -->
+    <div class="container mt-3 border border-warning">
+      <!-- название контейнера -->
+      <div class="row">
+        <div class="col bg-warning">
+          <h2 class="text-center">Самостоятельная деятельность</h2>
+        </div>
+      </div>
+      <!-- /название контейнера -->
+      <!-- начало контейнера -->
+      <div class="row">
+        <div class="col">
+          <!-- начало оповещения -->
+          <div class="container my-3 border border-info">
+            <!-- название оповещения -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Оповещения</h3>
+              </div>
+            </div>
+            <!-- конец названия оповещения -->
+            <!-- начало тела оповещения -->
+            <div class="row">
+              <div class="col-12">
+                <div class="alert alert-dark fade show">
+                  <button type="button" data-dismiss="alert" class="close">
+                    <span>&times;</span>
+                  </button>
+                  <h4 class="text-center">Führergruß</h4>
+                  <img
+                    style="height: 250px; float: right;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Bundesarchiv_Bild_102-13748%2C_Adolf_Hitler.jpg/440px-Bundesarchiv_Bild_102-13748%2C_Adolf_Hitler.jpg"
+                    alt="Führergruß"
+                  />
+                  <p class="py-5 clearfix">
+                    Eine Variante des Grußes, bei der der Arm nicht
+                    ausgestreckt, sondern nach hinten angewinkelt wird,
+                    ermöglichte es, auch bei körperlichen Gebrechen, die das
+                    Ausstrecken des Armes nicht möglich machen, den Gruß
+                    abzuleisten. Diese Form des Grußes wurde auch verwendet,
+                    wenn enge Platzverhältnisse ein Ausstrecken des Armes nicht
+                    zuließen oder der zu Grüßende dem Grüßenden direkt
+                    gegenüberstand.
+                  </p>
+                  <hr />
+                  <p class="text-center">
+                    Что бы не видеть это оповещение нажмите крестик.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- конец тела оповещения -->
+          </div>
+          <!-- конец оповещения -->
+          <!-- начало значков -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row">
+              <div class="col bg-info">
+                <h3 class="text-center">Значки</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row p-4">
+              <div class="col-3">
+                <p>
+                  Теперь, когда мы научились летать по воздуху, как птицы,
+                  плавать под водой, как рыбы, нам не хватает только одного:
+                  научиться жить на земле, как люди.
+
+                  <span class="badge badge-danger">
+                    Бернард Шоу
+                  </span>
+                </p>
+              </div>
+              <div class="col-3">
+                <p>
+                  Три вещи никогда не возвращаются обратно — время, слово,
+                  возможность. Поэтому: не теряй времени, выбирай слова, не
+                  упускай возможность.
+                  <span class="badge badge-info">
+                    Конфуций
+                  </span>
+                </p>
+              </div>
+              <div class="col-3">
+                <p>
+                  Настоящая красота живёт в сердце, отражается в глазах и
+                  проявляется в поступках.
+                  <span class="badge badge-dark">
+                    Ошо
+                  </span>
+                </p>
+              </div>
+              <div class="col-3">
+                Странный этот мир, где двое смотрят на одно и то же, а видят
+                полностью противоположное.
+                <span class="badge badge-warning">
+                  Агата Кристи
+                </span>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец значков -->
+          <!-- начало крошек -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Хлебные крошки</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row">
+              <div class="col-12">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Начальная</a></li>
+                  <li class="breadcrumb-item"><a href="#">wiki</a></li>
+                  <li class="breadcrumb-item active">Прокрастинация</li>
+                </ul>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец крошек -->
+          <!-- начало карточек -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row">
+              <div class="col bg-info">
+                <h3 class="text-center">Карточки</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row p-5">
+              <div class="col-3">
+                <div class="card text-center">
+                  <img
+                    class="card-img-top"
+                    src="https://www.iguides.ru/upload/medialibrary/a99/a99109b180390065279fc49d799724fb.jpg"
+                    alt="селфи"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Селфи палка</h5>
+                    <p class="card-text">
+                      Тебе одиноко, купи сэлфи палку, вас станет двое.
+                    </p>
+                    <a href="#" class="btn btn-primary">Купить</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Альпы</h5>
+                    <p class="card-text">
+                      «Если вы идете в горы, где нет опасности, вы не настоящий
+                      альпинист.»
+                    </p>
+                    <a href="#" class="btn btn-primary">Отправится</a>
+                  </div>
+                  <img
+                    class="card-img-bottom"
+                    src="https://i.ytimg.com/vi/zMitL6PWTSc/maxresdefault.jpg"
+                    alt="milka"
+                  />
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card text-right">
+                  <div class="card-header">
+                    <h5 class="card-title">Цитата дня</h5>
+                  </div>
+                  <div class="card-body">
+                    <blockquote>
+                      <p>
+                        ... человек замечает в мире лишь то, что уже несет в
+                        себе.
+                      </p>
+                      <div class="blockquote-footer">
+                        Смысл жизни <br />
+                        <cite>Антуан де Сент-Экзюпери</cite>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card text-center bg-success text-white">
+                  <div class="card-header">
+                    <h5 class="card-title">Армия</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Бог не на стороне больших батальонов, а на стороне лучших
+                      стрелков.
+                    </p>
+                    <a href="#" class="btn btn-primary">Вступить в ряды</a>
+                  </div>
+                  <div class="card-footer">
+                    <h5 class="card-title">Твой военкомат</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-group mt-5">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h5 class="card-title">Платон</h5>
+                  </div>
+                  <img
+                    class="card-img-top"
+                    src="https://gidvgreece.com/wp-content/uploads/2014/11/platon.jpg"
+                    alt="платон"
+                  />
+                  <div class="card-body d-flex flex-column justify-content-end">
+                    <p class="card-text">
+                      Во-первых, есть тождественная идея, нерожденная и
+                      негибнущая, ничего не воспринимающая в себя откуда бы то
+                      ни было и сама ни во что не входящая, незримая и никак
+                      иначе не ощущаемая, но отданная на попечение мысли.
+                      Во-вторых, есть нечто подобное этой идее и носящее то же
+                      имя — ощутимое, рождённое, вечно движущееся, возникающее в
+                      некоем месте и вновь из него исчезающее, и оно
+                      воспринимается посредством мнения, соединенного с
+                      ощущением. В-третьих, есть ещё один род, а именно
+                      пространство: оно вечно, не приемлет разрушения, дарует
+                      обитель всему роду, но само воспринимается вне ощущения,
+                      посредством некоего незаконного умозаключения, и поверить
+                      в него почти невозможно.
+                    </p>
+                    <a
+                      href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D1%82%D0%BE%D0%BD"
+                      class="w-50 mx-auto btn btn-primary"
+                      >Узнать</a
+                    >
+                  </div>
+                  <div class="card-footer">
+                    <h5 class="card-title">Информация взята с википедии</h5>
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h5 class="card-title">Сократ</h5>
+                  </div>
+                  <img
+                    class="card-img-top"
+                    src="https://gidvgreece.com/wp-content/uploads/2014/11/socrates.jpg"
+                    alt="сократ"
+                  />
+                  <div class="card-body d-flex flex-column justify-content-end">
+                    <p class="card-text">
+                      Грань между присущими человеку духовными процессами и
+                      материальным миром, уже намеченная предшествующим
+                      развитием греческой философии (в учении Пифагора, софистов
+                      и др.), была более отчётливо обозначена именно Сократом:
+                      он акцентировал своеобразие сознания сравнительно с
+                      материальным бытием и одним из первых глубоко раскрыл
+                      сферу духовного как самостоятельную реальность,
+                      провозгласив её как нечто не менее достоверное, чем бытие
+                      воспринимаемого мира (монизм)
+                    </p>
+                    <a
+                      href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BA%D1%80%D0%B0%D1%82"
+                      class="w-50 mx-auto btn btn-primary"
+                      >Узнать</a
+                    >
+                  </div>
+                  <div class="card-footer">
+                    <h5 class="card-title">Информация взята с википедии</h5>
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h5 class="card-title">Аристотель</h5>
+                  </div>
+                  <img
+                    class="card-img-top"
+                    src="https://www.psychologos.ru/images/1_1435316844.jpg"
+                    alt="аристотель"
+                  />
+                  <div class="card-body d-flex flex-column justify-content-end">
+                    <p class="card-text">
+                      Аристотель разделяет науки на теоретические, цель которых
+                      — знание ради знания, практические и «поэтические»
+                      (творческие). К теоретическим наукам относятся физика,
+                      математика и «первая философия» (она же — теологическая
+                      философия, она же позднее была названа метафизикой). К
+                      практическим наукам — этика и политика (она же — наука о
+                      государстве). Одним из центральных учений «первой
+                      философии» Аристотеля является учение о четырёх причинах,
+                      или первоначалах.
+                    </p>
+                    <a
+                      href="https://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%B8%D1%81%D1%82%D0%BE%D1%82%D0%B5%D0%BB%D1%8C"
+                      class="w-50 mx-auto btn btn-primary"
+                      >Узнать</a
+                    >
+                  </div>
+                  <div class="card-footer">
+                    <h5 class="card-title">Информация взята с википедии</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- конец карточек -->
+          <!-- начало кнопок -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Кнопки, группы кнопок</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row m-3 d-flex justify-content-between">
+              <div class="col-2">
+                <button
+                  type="button"
+                  class="btn btn-block active btn-lg btn-primary"
+                >
+                  Primary
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-block active btn-lg btn-secondary"
+                >
+                  Secondary
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-block active btn-lg btn-success"
+                >
+                  Success
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  class="btn btn-block btn-lg btn-danger"
+                >
+                  Danger
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  class="btn btn-block btn-sm btn-warning"
+                >
+                  Warning
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  class="btn btn-block btn-sm btn-info"
+                >
+                  Info
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  class="btn btn-block btn-sm btn-light"
+                >
+                  Light
+                </button>
+                <button
+                  type="button"
+                  disabled
+                  class="btn btn-block btn-sm btn-dark"
+                >
+                  Dark
+                </button>
+              </div>
+              <div class="col-2">
+                <button
+                  type="button"
+                  class="my-1 btn btn-sm btn-outline-primary"
+                >
+                  Primary
+                </button>
+                <button
+                  type="button"
+                  class="my-1 btn btn-sm btn-outline-secondary"
+                >
+                  Secondary
+                </button>
+                <button
+                  type="button"
+                  class="my-1 btn btn-sm btn-outline-success"
+                >
+                  Success
+                </button>
+                <button
+                  type="button"
+                  class="my-1 btn btn-sm btn-outline-danger"
+                >
+                  Danger
+                </button>
+                <button
+                  type="button"
+                  class="my-1 btn btn-lg btn-outline-warning"
+                >
+                  Warning
+                </button>
+                <button type="button" class="my-1 btn btn-lg btn-outline-info">
+                  Info
+                </button>
+                <button type="button" class="my-1 btn btn-lg btn-outline-light">
+                  Light
+                </button>
+                <button type="button" class="my-1 btn btn-lg btn-outline-dark">
+                  Dark
+                </button>
+                <input
+                  type="submit"
+                  value="submit"
+                  class="btn btn-lg btn-outline-dark"
+                />
+                <input
+                  type="reset"
+                  value="reset"
+                  class="btn btn-lg btn-outline-dark"
+                />
+                <input
+                  type="button"
+                  value="button"
+                  class="btn btn-lg btn-outline-dark"
+                />
+              </div>
+
+              <div class="col-4">
+                <div class="my-2 btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-outline-success btn-group-toggle">
+                    <input type="checkbox" /> Checked
+                  </label>
+                </div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-outline-success active">
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option1"
+                      autocomplete="off"
+                      checked
+                    />
+                    Checked
+                  </label>
+                  <label class="btn btn-outline-success">
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option1"
+                      autocomplete="off"
+                    />
+                    Checked
+                  </label>
+                  <label class="btn btn-outline-success">
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option1"
+                      autocomplete="off"
+                    />
+                    Checked
+                  </label>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <button type="button" class="btn btn-outline-success">
+                    Success
+                  </button>
+                  <button type="button" class="btn btn-outline-danger">
+                    Danger
+                  </button>
+                  <button type="button" class="btn btn-outline-warning">
+                    Warning
+                  </button>
+                  <button type="button" class="btn btn-outline-info">
+                    Info
+                  </button>
+                </div>
+                <div class="btn-toolbar m-3">
+                  <div
+                    class="btn-group-vertical btn-group-lg btn-group-toggle mr-2"
+                    data-toggle="buttons"
+                  >
+                    <button type="button" class="btn btn-success">1</button>
+                    <button type="button" class="btn btn-danger">2</button>
+                    <button type="button" class="btn btn-warning">3</button>
+                    <button type="button" class="btn btn-info">4</button>
+                  </div>
+                  <!-- выровнял высоту кнопок показанных в примере -->
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-group btn-group-toggle mr-2"
+                      data-toggle="buttons"
+                    >
+                      <button type="button" class="btn btn-success">1</button>
+                      <button type="button" class="btn btn-danger">2</button>
+                      <button type="button" class="btn btn-warning">3</button>
+                    </div>
+                    <div
+                      class="btn-group group-sm btn-group-toggle"
+                      data-toggle="buttons"
+                    >
+                      <button type="button" class="btn btn-success">1</button>
+                    </div>
+                  </div>
+                  <!-- закончил выравнивание -->
+                </div>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец кнопок -->
+          <!-- начало Выпадающие списки -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Выпадающие списки</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row m-3">
+              <div class="col-12">
+                <div class="dropdown btn-group">
+                  <button class="btn btn-info" type="button">
+                    Выпадающий список
+                  </button>
+                  <button
+                    class="btn btn-info dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                  ></button>
+                  <div
+                    class="dropdown-menu dropdown-menu-right"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <h6 class="dropdown-header">Имя меню</h6>
+                    <a class="dropdown-item" href="#">Меню</a>
+                    <a class="dropdown-item disabled" href="#">Меню</a>
+                    <a class="dropdown-item" href="#">Меню</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Меню</a>
+                    <a class="dropdown-item" href="#">Меню</a>
+                  </div>
+                </div>
+                <div class="dropdown btn-group">
+                  <button
+                    class="btn btn-info dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                  >
+                    Выпадающий список
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-right"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <h6 class="dropdown-header">Имя меню</h6>
+                    <a class="dropdown-item" href="#">Меню</a>
+                    <a class="dropdown-item disabled" href="#">Меню</a>
+                    <a class="dropdown-item" href="#">Меню</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Меню</a>
+                    <a class="dropdown-item" href="#">Меню</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Выпадающие списки -->
+          <!-- начало Пагинация формы -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row">
+              <div class="col bg-info">
+                <h3 class="text-center">Пагинация формы</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row m-5">
+              <div class="col-12">
+                <form>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group row">
+                        <label class="col">
+                          Email
+                          <input
+                            type="email"
+                            class="form-control"
+                            aria-describedby="emailHelp"
+                            placeholder="Email адресс"
+                          />
+                          <small class="offset-1" style="font-size: 9px;">
+                            Мы будем делиться вашей электронной почтой с
+                            кем-либо.
+                          </small>
+                        </label>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col">
+                          Password
+                          <input
+                            readonly
+                            type="password"
+                            class="form-control"
+                            placeholder="пароль"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-6 d-flex flex-column">
+                      <div class="form-group row">
+                        <label class="col">
+                          Example select
+                          <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="form-row row">
+                        <div class="form-check-inline col">
+                          <label class="form-check-label">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              disabled
+                            />
+                            Какой-то текст
+                          </label>
+                        </div>
+                        <div class="form-check-inline col">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" />
+                            Какой-то текст
+                          </label>
+                        </div>
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="align-self-end mt-auto btn btn-primary"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Пагинация формы -->
+          <!-- начало Инпут группы -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Инпут группы</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row m-5">
+              <div class="col-12">
+                <form>
+                  <div class="input-group mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Какой-то текст"
+                      aria-describedby="basic-addon1"
+                    />
+                    <div class="input-group-append">
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label
+                          class="btn btn-outline-info btn-group-toggle"
+                          style="border-radius: 0;"
+                        >
+                          <input type="checkbox" /> кнопка
+                        </label>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary dropdown-toggle"
+                        data-toggle="dropdown"
+                      >
+                        кнопка
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="dropdown-item">1</div>
+                        <div class="dropdown-item">2</div>
+                        <div class="dropdown-item">3</div>
+                        <div class="dropdown-item">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email"
+                      aria-describedby="basic-addon2"
+                    />
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2"
+                        >@gmail.com</span
+                      >
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <input
+                          type="checkbox"
+                          aria-label="Checkbox for following text input"
+                        />
+                      </div>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Text input with checkbox"
+                    />
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        &#128386;
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" />
+                    <input type="text" class="form-control" />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Отправить
+                  </button>
+                </form>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Инпут группы -->
+          <!-- начало Навигация, навбары -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Навигация, навбары</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row">
+              <div class="col m-5">
+                <div class="row m-5">
+                  <div class="col-12">
+                    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                      <a class="navbar-brand" href="#">Navbar</a>
+                      <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+
+                      <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                      >
+                        <ul class="navbar-nav">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                          </li>
+                        </ul>
+                        <form class="form-inline ml-auto">
+                          <input
+                            class="form-control"
+                            type="search"
+                            placeholder="Search"
+                          />
+                          <button class="btn btn-outline-success" type="submit">
+                            Search
+                          </button>
+                        </form>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 m-5">
+                    <div class="row">
+                      <div class="col-3">
+                        <nav class="nav flex-column nav-pills">
+                          <a
+                            class="nav-item nav-link active"
+                            id="nav1-1"
+                            data-toggle="tab"
+                            aria-controls="tab1-1"
+                            href="#tab1-1"
+                            >Начальная</a
+                          >
+                          <a
+                            class="nav-item nav-link"
+                            id="nav1-2"
+                            data-toggle="tab"
+                            aria-controls="tab1-2"
+                            href="#tab1-2"
+                            >Страница 1</a
+                          >
+                          <a
+                            class="nav-item nav-link"
+                            id="nav1-3"
+                            data-toggle="tab"
+                            aria-controls="tab1-3"
+                            href="#tab1-3"
+                            >Страница 2</a
+                          >
+                        </nav>
+                      </div>
+                      <div class="col-9">
+                        <div class="tab-content m-3">
+                          <div
+                            class="tab-pane fade show active"
+                            id="tab1-1"
+                            aria-labelledby="nav1-1"
+                          >
+                            Lorem Начальная dolor sit amet consectetur
+                            adipisicing elit. Perferendis nihil nobis, ducimus
+                            error vero unde quibusdam debitis. Magnam, quas.
+                            Voluptates sed, tenetur officia fugiat incidunt
+                            recusandae veniam magnam eligendi aliquam. Qui, cum
+                            eaque tempora enim ullam perspiciatis harum, dolor
+                            neque expedita, nemo quos repudiandae nobis
+                            repellendus ex nulla ad iusto asperiores laborum vel
+                            saepe hic itaque porro consequatur! Iusto, magni.
+                            Optio aut hic inventore placeat rerum consectetur
+                            nesciunt voluptas voluptate nam impedit, in animi
+                            architecto qui sequi doloremque assumenda vitae
+                            corporis soluta beatae praesentium perferendis.
+                            Perspiciatis obcaecati tenetur unde atque. Molestias
+                            cumque modi, hic iste ut atque praesentium. Velit
+                            eligendi dolore mollitia voluptate sint quis aliquid
+                            fugiat excepturi voluptatem dolorem quia et, earum
+                            laboriosam, impedit, quidem placeat hic perspiciatis
+                            ab? Cum consectetur quaerat praesentium. Neque
+                            eveniet iste beatae minima ipsum veniam itaque, quos
+                            quae delectus doloribus, hic incidunt consequuntur
+                            magnam numquam error qui nisi quidem magni illo
+                            voluptatum recusandae. Debitis? Iure, cupiditate
+                            nobis maiores, perspiciatis quibusdam tenetur magni
+                            deleniti quo recusandae vitae laboriosam nemo facere
+                            rerum quasi? Deserunt delectus dolorum in voluptates
+                            dolor quasi excepturi cumque minima vitae. Ipsum,
+                            porro. Saepe id sequi iusto pariatur consequatur.
+                            Voluptas architecto culpa aspernatur deleniti
+                            molestiae impedit cum, esse neque enim non,
+                            explicabo voluptates omnis, quibusdam totam
+                            temporibus nisi ipsa a magni delectus assumenda.
+                            Unde similique molestiae, enim iste nihil, ex error
+                            fugiat veniam neque voluptatem cum atque modi rem
+                            repellendus magnam facere minus culpa iusto,
+                            temporibus sint provident et aspernatur! Similique,
+                            dolore eum. Sunt iusto nemo ex quos qui excepturi
+                            eveniet officiis, rem nihil sapiente totam sint
+                            voluptates delectus, amet in illo saepe repellendus
+                            aliquid perspiciatis incidunt. Corporis sunt magnam
+                            adipisci perferendis incidunt. Inventore maiores
+                            fuga quo iure asperiores assumenda explicabo,
+                            dolores aut in adipisci nisi voluptates. Aliquid,
+                            quidem laboriosam. Laudantium aperiam ipsa provident
+                            praesentium, alias quos, architecto, autem
+                            distinctio voluptatum blanditiis tenetur?
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="tab1-2"
+                            aria-labelledby="nav1-2"
+                          >
+                            Lorem Страница 1 dolor sit amet consectetur
+                            adipisicing elit. Quae deserunt, assumenda nostrum
+                            tenetur maiores sint fuga. Odit nisi deserunt illum
+                            quia accusamus eaque error, sed, nesciunt similique
+                            a tempore voluptatum. Voluptate asperiores ex
+                            aliquid suscipit eos quia labore corrupti architecto
+                            dicta, recusandae soluta aut libero quis sapiente
+                            tempora sequi doloribus eveniet et voluptatibus
+                            temporibus iusto quasi. Ratione possimus aliquid
+                            error? Perspiciatis culpa ad tempore animi aperiam
+                            quam obcaecati veritatis consectetur ut! Ullam eos,
+                            harum consectetur vel odit repellat exercitationem
+                            modi nostrum, asperiores, magnam minima incidunt
+                            assumenda quod doloremque maxime officiis! Officiis,
+                            tenetur. Autem eaque totam, quam dolorem impedit
+                            fugiat deleniti laudantium ea dolorum alias neque.
+                            Laborum aspernatur quisquam nesciunt pariatur atque
+                            voluptate, iste obcaecati sit alias odit expedita
+                            veniam et? Odit saepe molestias quod quisquam
+                            mollitia pariatur et quo architecto atque voluptates
+                            ab alias magnam fuga nam non rerum, facilis cum,
+                            dignissimos quis! Quod minima veritatis ipsa facere
+                            delectus debitis? Enim, perferendis est. Aliquam
+                            tempore temporibus tempora deserunt quam rem nobis
+                            soluta! Ea voluptate cupiditate quam quis harum
+                            minus consectetur praesentium? Eius voluptatum dicta
+                            consequatur minus dignissimos minima sed esse. Rem
+                            molestias provident ducimus, deleniti, ipsam
+                            necessitatibus, impedit inventore accusamus quae
+                            officiis beatae dolorum exercitationem? Dolores sint
+                            nemo, et illum similique quia illo officiis nulla.
+                            Voluptatibus quis expedita delectus alias! Rerum
+                            dolor hic quisquam aperiam vitae inventore? Possimus
+                            error repellat quaerat? Doloremque quis iure odio
+                            debitis, enim quaerat inventore sequi eveniet vitae
+                            in magni maxime aliquam at voluptatum molestias
+                            harum. Incidunt velit aliquam ullam voluptates
+                            dolorem nihil impedit similique. Exercitationem
+                            dolore reiciendis eius maiores corporis porro
+                            deleniti iste, sunt natus asperiores explicabo quod
+                            consequatur, inventore perferendis ipsa autem. Odio,
+                            molestiae. Libero, esse voluptatum. Nemo, suscipit
+                            pariatur illum temporibus totam omnis quisquam iste
+                            atque ut sequi necessitatibus in. Odit adipisci
+                            veritatis incidunt natus commodi fugit, obcaecati
+                            rerum magnam vel officia ipsa?
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="tab1-3"
+                            aria-labelledby="nav1-3"
+                          >
+                            Lorem Страница 2 dolor sit, amet consectetur
+                            adipisicing elit. Reiciendis illo ipsa officiis,
+                            dolore eos optio, unde accusantium commodi saepe
+                            tenetur praesentium animi quae aliquid aut rem.
+                            Nulla blanditiis recusandae deleniti? Ut doloribus
+                            non maiores quam voluptatem quasi aut voluptates!
+                            Consequuntur dicta nesciunt enim saepe, repellendus
+                            deserunt ea natus illum nostrum quaerat, dolores
+                            nobis, sint numquam possimus nam perferendis
+                            reiciendis omnis! Ex obcaecati alias vel assumenda
+                            laborum possimus facere minima? Non omnis vitae quam
+                            obcaecati totam ullam! Est aut illum, reiciendis,
+                            repellat suscipit rerum consequuntur eius magni
+                            dolorum sed, sapiente temporibus. Maiores, nam!
+                            Consequatur ad maxime nisi inventore laudantium
+                            impedit necessitatibus, exercitationem iure, non
+                            quae delectus doloremque et molestiae illum tempora
+                            iste obcaecati, reiciendis ex vitae possimus. A
+                            minima dolorem laborum. Maxime possimus quo corrupti
+                            cupiditate sed doloremque voluptatum repellendus
+                            adipisci. Facere blanditiis minus quidem voluptates
+                            deleniti, iusto tempora eum mollitia qui quibusdam
+                            repellat at eveniet et officia deserunt laborum
+                            animi! Ipsum iste sed minus vitae fugit cupiditate
+                            veniam tenetur accusamus molestiae? Iste eius esse
+                            quaerat delectus? Eos fuga harum quibusdam iste
+                            eius, praesentium sit molestiae incidunt veniam
+                            eligendi! Deserunt, impedit! Nam necessitatibus
+                            similique, doloremque non pariatur iusto explicabo
+                            doloribus! Dolorum nostrum earum natus repudiandae
+                            eum quae, animi possimus, tenetur unde, facere
+                            impedit velit! Nesciunt ratione doloremque debitis
+                            iusto repudiandae. At? Temporibus eius amet
+                            repellendus quia debitis harum facere cupiditate,
+                            soluta quaerat error! Quibusdam provident eveniet,
+                            quaerat aut illo mollitia saepe sint assumenda!
+                            Dolores deserunt at mollitia dolorem recusandae
+                            praesentium aut? Et dolorum atque tempore quisquam.
+                            Distinctio ex dignissimos obcaecati maxime
+                            doloremque labore nemo, non dolorem, laborum at
+                            atque voluptatibus, eos quisquam amet perferendis
+                            commodi ut velit exercitationem consectetur eaque
+                            natus. Nemo eum ipsum architecto laudantium nihil
+                            soluta, aut fugiat rerum, veritatis repellat esse
+                            minus neque, labore ad reprehenderit modi reiciendis
+                            voluptatem. Rem vero totam magnam illo, adipisci
+                            minus beatae obcaecati!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 m-5">
+                    <ul class="nav nav-fill nav-pills">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="nav2-1"
+                          data-toggle="tab"
+                          aria-controls="tab2-1"
+                          href="#tab2-1"
+                          >Страница левая</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          id="nav2-2"
+                          data-toggle="tab"
+                          aria-controls="tab2-2"
+                          href="#tab2-2"
+                          >Начальная</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="nav2-3"
+                          data-toggle="tab"
+                          aria-controls="tab2-3"
+                          href="#tab2-3"
+                          >Страница правая</a
+                        >
+                      </li>
+                    </ul>
+                    <div class="tab-content m-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="tab2-1"
+                        aria-labelledby="nav2-1"
+                      >
+                        Lorem Левая, dolor sit amet consectetur adipisicing
+                        elit. Molestias sunt sapiente quod repellendus earum
+                        quaerat eius ea, veniam natus aperiam sequi, vel sint.
+                        Ex inventore ad quam necessitatibus ipsum perspiciatis!
+                        Voluptatibus culpa ratione minus facilis! Numquam neque
+                        sed enim quasi quidem a, quibusdam, vitae, unde
+                        inventore reprehenderit aliquid culpa doloribus quia
+                        cum. Numquam velit ut, doloribus repudiandae laboriosam
+                        debitis laborum. Corporis eum quam corrupti quas
+                        reiciendis tenetur omnis obcaecati, qui illum optio
+                        dolorem laudantium delectus. Laboriosam, incidunt.
+                        Tenetur dolorum earum animi, aliquam ut, reprehenderit
+                        illum cumque ducimus nam quisquam amet. Mollitia
+                        excepturi iste ea quis! Aliquid odit sint sit, omnis
+                        odio natus tenetur enim magnam rem corrupti cumque
+                        alias, eos nulla in necessitatibus accusamus fugit
+                        possimus et ut quod? Id? Officia modi a ut, ad nostrum
+                        nulla consectetur quisquam nemo labore inventore fugit
+                        iusto, qui natus, illo doloribus distinctio omnis?
+                        Corporis repellendus inventore quidem odit. Veritatis
+                        repellendus repudiandae natus voluptates.
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab2-2"
+                        aria-labelledby="nav2-2"
+                      >
+                        Lorem Начальная dolor sit, amet consectetur adipisicing
+                        elit. Quis repudiandae culpa ipsam consequatur saepe
+                        nulla modi repellat vitae beatae voluptatem corporis
+                        sunt illum perspiciatis nisi, optio quia, iste quibusdam
+                        ipsa! Tempora blanditiis rerum eius quibusdam
+                        repudiandae in delectus quos ipsa. Optio rerum deleniti
+                        fuga ad doloremque placeat cum culpa facere libero error
+                        tempora harum in, quisquam debitis neque quas pariatur?
+                        Enim, tempore recusandae. Dolorum iure fuga esse qui
+                        eligendi veniam quis quo, suscipit vitae doloribus quod,
+                        sed non hic expedita, ducimus necessitatibus minus
+                        quibusdam? Culpa sapiente omnis voluptatum qui ullam!
+                        Suscipit fugit quaerat eos obcaecati nam unde quisquam
+                        corrupti architecto beatae aliquam porro enim reiciendis
+                        neque debitis, natus, tempore commodi voluptate quidem
+                        distinctio. Iusto totam error suscipit expedita minima
+                        rerum? Facilis molestiae omnis quia, totam dolore,
+                        nostrum temporibus esse eaque odio atque recusandae
+                        neque? Fugit mollitia beatae molestias rerum debitis
+                        accusantium totam enim illum ut, ratione, labore
+                        nostrum, praesentium quibusdam!
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="tab2-3"
+                        aria-labelledby="nav2-3"
+                      >
+                        Lorem Правая dolor sit amet, consectetur adipisicing
+                        elit. Nisi voluptas ducimus ullam voluptate repellendus
+                        quia, consequuntur quae nesciunt ipsa. Accusamus impedit
+                        voluptatum veniam quaerat vero cupiditate aperiam, sunt
+                        repellat temporibus. Cumque vitae corrupti impedit
+                        quaerat nesciunt at consectetur ratione eius sint,
+                        suscipit quidem id ipsam similique aperiam debitis
+                        consequuntur aspernatur. Animi facilis earum autem ullam
+                        repellendus quidem aut impedit asperiores. Perferendis
+                        voluptate iure dolorem? Illum quia reiciendis ducimus
+                        alias, iste, accusantium perspiciatis non quisquam,
+                        nostrum nisi ullam a eum! Incidunt laboriosam aspernatur
+                        aliquid? Corporis, voluptatem. Corrupti asperiores
+                        expedita autem eveniet. Voluptate, maxime? Perspiciatis
+                        ducimus tenetur optio dignissimos. Laboriosam molestias
+                        delectus dolore vitae! Quis, quae sed. Cum, at illum
+                        ipsam enim voluptatibus doloribus harum, maiores
+                        perspiciatis minus distinctio aspernatur reiciendis et?
+                        Illo voluptatem qui quibusdam enim, distinctio totam
+                        provident explicabo error ex est doloremque temporibus
+                        perspiciatis similique veritatis tempore officiis
+                        facilis consequuntur hic consequatur veniam, sint soluta
+                        eligendi, id quae. Accusamus.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Навигация, навбары -->
+          <!-- начало Прогресс бар -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Прогресс бар</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row m-5">
+              <div class="col-12">
+                <div class="progress mb-2" style="height: 30px;">
+                  <div
+                    id="bar1"
+                    class="progress-bar bg-warning"
+                    style="transition: 0.49s linear; width: 0%;"
+                  >
+                    0%
+                  </div>
+                  <script>
+                    let div = document.querySelector("#bar1");
+                    let style = div.attributes.style;
+                    let counter = 0;
+                    setInterval(() => {
+                      counter++;
+                      if (counter > 100) counter = 0;
+                      style.nodeValue = `transition: 0.49s linear; width: ${counter}%;`;
+                      div.textContent = counter + "%";
+                    }, 500);
+                  </script>
+                </div>
+                <div class="progress mb-2" style="height: 50px;">
+                  <div
+                    class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                    style="width: 10%;"
+                  >
+                    10%
+                  </div>
+                  <div
+                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                    style="width: 20%;"
+                  >
+                    20%
+                  </div>
+                  <div
+                    class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                    style="width: 45%;"
+                  >
+                    45%
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Прогресс бар -->
+          <!-- начало Скролинг -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Скролинг</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row">
+              <div class="col-12">
+                <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                  <a class="navbar-brand" href="#1">Никколо Макиавелли</a>
+                  <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#1">Биография</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#securaty">Охрана Флоренции</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        data-toggle="dropdown"
+                        href="#"
+                        role="button"
+                        >Выпадашка</a
+                      >
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#1">Начало</a>
+                        <a class="dropdown-item" href="#securaty">Середина</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#end">Конец истории</a>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+                <div
+                  data-spy="scroll"
+                  data-target="#navbar-example2"
+                  style="position: relative; height: 400px; overflow: auto;"
+                >
+                  <h4 id="1" class="text-center">
+                    Краткая биография Никколо Макиавелли
+                  </h4>
+                  <img
+                    class="d-block mx-auto"
+                    src="https://cdn.pravda.ru/nasledie/article/4/8/9/13489.jpeg"
+                    alt="nik"
+                  />
+                  <p>
+                    В 1469 году во Флоренции (в деревне Сан Кашано) родился
+                    итальянский писатель, мыслитель, философ – Никколо
+                    Макиавелли. Его отец, Бернардо ди Николо Макиавелли, служил
+                    адвокатом, мать звали Бартоломмея ди Стефано Нели. Никколо
+                    родился в неспокойное время, когда Папа Римский имел большое
+                    влияние на армию, а отдельные города государства Италии
+                    переходили во владения таких стран, как Испания, Франция и
+                    Римская империя. Это было время, когда не было политической
+                    стабильности: власть переходила от одних правителей к
+                    другим, и невозможно было понять, что же делать жителям.
+                    Падение Римской империи в 1527 г. принесло колоссальные
+                    разрушения и разграбления таким городам, как Генуя и
+                    Флоренция, где жила семья Никколо Макиавелли на протяжении
+                    всей своей жизни. Наблюдая за происходящим в современной ему
+                    Флоренции, он анализировал, развивал знания,
+                    систематизировал их и использовал в своих трудах. В возрасте
+                    29 лет Макиавелли занимает должность государственного
+                    служащего, является секретарем и послом. Состоял в Совете по
+                    дипломатическим переговорам, во время военных действий. В
+                    1501 г. Макиавелли возвращается во Флоренцию и заключает
+                    брак с Мариеттой ди Луиджи Корсини. В то время брак
+                    рассматривали, в первую очередь, как выгодный союз,
+                    объединявший семьи, находящиеся в одном социальном статусе.
+                    С женой его связывали только дети, которых было пятеро. К
+                    супруге любви не испытывал, о чем свидетельствовали его
+                    романы с женщинами, которые Никколо заводил, пребывая в
+                    отъезде с дипломатическими миссиями. С 1502 по 1503 г.
+                    Макиавелли наблюдал за действиями Чезаре Борджиа; ему
+                    нравился этот правитель, пытавшийся укрепить и расширить
+                    владения Италии. В своих трудах Макиавелли отметил главные
+                    качества Борджиа как правителя: уверенность в себе;
+                    смелость; жестокость, присущая всем, кто стремится к
+                    изменениям на государственном уровне. В ранних описаниях
+                    Борджиа Макиавелли замечает авантюризм в характере сына
+                    кардинала, пытавшегося использовать свое положение
+                    максимально выгодно для себя. Позже Макиавелли напишет
+                    трактат «Государь», где опишет методы правления настоящего
+                    правителя. С точки зрения Макиавелли образцом его «Государя»
+                    является Чезаре Борджиа. «Государь» систематизировал знания
+                    принципов прихода к власти, ее поддержки и управления.
+                    Благодаря произведению «Государь» исторически сложилось
+                    мнение о характере Макиавелли, полном цинизма. По мнению
+                    историков, у Макиавелли нормы морали уступали грубой силе.
+                  </p>
+                  <h4 id="securaty">Охранна из ополченцев</h4>
+                  <p>
+                    С 1503 по 1506 г. Макиавелли является ответственным за
+                    стражу Флоренции, которая также защищала город. Он доверял
+                    охрану ополчению, созданному из граждан города, мотивируя и
+                    разъясняя такой выбор в «Государе», а также в «Рассуждениях
+                    о первой декаде Тита Ливия». В произведении «Рассуждения о
+                    первой декаде Тита Ливия» он впервые затронул вопрос о
+                    влиянии личности правителя на политику страны. Саму политику
+                    он называл «опытной наукой». Он был уверен, что для Италии
+                    лучше сильный авторитарный правитель, чем вечно
+                    раздробленные воюющие феодалы. Макиавелли был автором
+                    трактата «О военном искусстве», где он показал преимущества
+                    армии по призыву по сравнению с армией по найму. В 1512 г.
+                    была отменена республика и восстановлена монархия, благодаря
+                    объединению сил семьи Медичи и Папы Римского. О жизненном
+                    настрое Макиавелли в эти годы свидетельствуют его письма к
+                    Франческо Ветори.
+                  </p>
+                  <h4 id="end">Конец истории</h4>
+                  <p>
+                    После свержения республики в 1513 г. Никколло как
+                    государственный деятель оказался не у дел, так как
+                    поддерживал и сотрудничал с республиканцами. В дальнейшем он
+                    был обвинен как заговорщик, арестован и подвергнут
+                    физическим пыткам. Несмотря на такое давление, Макиавелли не
+                    признавался в участии в заговоре, в итоге был освобожден. Он
+                    не имел права проживать во Флоренции, поэтому уехал в свое
+                    поместье Sant’Andrea в Percussina, где имел возможность
+                    заниматься литературой, в частности трактатами, благодаря
+                    которым и стал заметной личностью в истории. В 1520 г.
+                    Никколо получил разрешение вернуться во Флоренцию, где
+                    принял должность историографа. В последующие пять лет он
+                    работает над «Историей Флоренции». Макиавелли критиковал
+                    тех, кто, по его мнению, искажал Священное Писание и
+                    использовал его в своих целях. Также ему не нравились
+                    античность и подвиги античных героев. Он автор военно
+                    теоретических произведений. Выступал как сторонник сильной
+                    государственной власти в Италии. Умер 21 июня 1527 г. во
+                    Флоренции.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Скролинг -->
+          <!-- начало Адаптивное видео -->
+          <div class="container my-3 border border-info">
+            <!-- название  -->
+            <div class="row mb-3">
+              <div class="col bg-info">
+                <h3 class="text-center">Адаптивное видео</h3>
+              </div>
+            </div>
+            <!-- конец названия -->
+            <!-- начало тела -->
+            <div class="row">
+              <div class="col-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/fcW8p345I1E"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col-6 mx-auto m-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="text-center card-title">class="center-guf"</h5>
+                  </div>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/OMVSO4u0Vu4"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Далеко-далеко за словесными горами в стране, гласных и
+                      согласных живут рыбные тексты.
+                    </p>
+                    <a
+                      href="https://www.youtube.com/watch?v=kf70AU7ej5A"
+                      class="d-block mx-auto w-50 btn btn-primary"
+                      target="_blank"
+                      >Youtube</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- конец тела -->
+          </div>
+          <!-- конец Адаптивное видео -->
+        </div>
+      </div>
+      <!-- конец контейнера -->
+    </div>
+    <!-- /Tsk -->
+    <!-- Скрипты  -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!-- начало тела оповещения -->
+<!-- конец тела оповещения -->

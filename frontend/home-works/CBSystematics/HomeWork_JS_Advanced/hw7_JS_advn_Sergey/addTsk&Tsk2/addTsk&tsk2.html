@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Login information</legend>
+          <label>
+            Login
+            <input type="text" name="login" watermark="Enter your login" />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              watermark="Enter your password"
+            />
+          </label>
+          <label>
+            Re-enter pass
+            <input
+              type="password"
+              name="repassword"
+              watermark="Repeat your password"
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Personal information</legend>
+          <label>
+            Name
+            <input type="text" name="name" watermark="Enter your name" />
+          </label>
+          <label>
+            Surname
+            <input type="text" name="sname" watermark="Enter your surname" />
+          </label>
+          <label>
+            Email
+            <input
+              type="text"
+              class="email"
+              name="email"
+              watermark="Enter your email"
+            />
+          </label>
+          <label>
+            Sex
+            <select name="Sex">
+              <option disabled selected>Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </label>
+        </fieldset>
+        <div id="button">Submit</div>
+      </form>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

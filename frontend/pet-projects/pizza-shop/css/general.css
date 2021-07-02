@@ -1,0 +1,40 @@
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Roboto', sans-serif; */
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+body {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(253, 246, 227);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(245, 229, 184);
+}
+
+main {
+  margin-left: 5rem;
+  padding: 0;
+}
+
+.author {
+  text-align: center;
+  position: fixed;
+  bottom: 21px;
+  right: 21px;
+}

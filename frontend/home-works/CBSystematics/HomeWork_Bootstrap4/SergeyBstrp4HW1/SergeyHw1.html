@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .h-3e2px {
+        height: 300px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- задание 2.1 -->
+    <div class="container">
+      <div class="row">
+        <div class="col bg-warning">
+          <p class="my-0 text-center">Колонка на всю ширину</p>
+        </div>
+      </div>
+      <div class="row px-0">
+        <div class="col-6 bg-secondary">
+          <p class="my-0 text-center">Колонка на половину строки</p>
+        </div>
+        <div class="col bg-success">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col bg-danger">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col bg-dark">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+      </div>
+    </div>
+    <!-- /задание 2.1 -->
+    <br />
+    <!-- задание 2.2 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-danger">
+          <p class="my-0 text-center">Колонка на всю ширину</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col px-0 bg-warning">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col px-0 bg-info">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col px-0 bg-warning">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col px-0 bg-info">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col px-0 bg-warning">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+        <div class="col px-0 bg-info">
+          <p class="my-0 text-center">Колонка</p>
+        </div>
+      </div>
+    </div>
+    <!-- /задание 2.2 -->
+    <br />
+    <!-- задание 3 -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-6">
+          <!-- align-items -->
+          <div class="row h-3e2px">
+            <div class="col d-lex align-items-start bg-secondary">
+              <p>align-items-start</p>
+            </div>
+            <div class="col d-flex align-items-center bg-success">
+              <p>align-items-center</p>
+            </div>
+            <div class="col d-flex align-items-end bg-info">
+              <p>align-items-end</p>
+            </div>
+          </div>
+          <!-- /align-items -->
+        </div>
+        <!-- align-self- -->
+        <div class="col-6 d-flex bg-warning">
+          <p class="my-0 align-self-start">align-self-start</p>
+          <p class="my-0 align-self-center">align-self-center</p>
+          <p class="my-0 align-self-end">align-self-end</p>
+        </div>
+        <!-- /align-self -->
+      </div>
+      <!-- /row -->
+      <br />
+      <!-- justify-content -->
+      <!-- row -->
+      <div class="row">
+        <div class="col bg-info">
+          <p class="my-0 text-center">justify-content</p>
+        </div>
+      </div>
+      <!-- /row -->
+      <!-- row -->
+      <div class="row">
+        <div class="col d-flex justify-content-start bg-success">
+          <p class="my-0 bg-danger">1</p>
+          <p class="my-0 bg-danger">2</p>
+          <p class="my-0 bg-danger">3</p>
+        </div>
+        <div class="col d-flex justify-content-center bg-warning">
+          <p class="my-0 bg-danger">1</p>
+          <p class="my-0 bg-danger">2</p>
+          <p class="my-0 bg-danger">3</p>
+        </div>
+        <div class="col d-flex justify-content-end bg-success">
+          <p class="my-0 bg-danger">1</p>
+          <p class="my-0 bg-danger">2</p>
+          <p class="my-0 bg-danger">3</p>
+        </div>
+        <div class="col d-flex justify-content-around bg-warning">
+          <p class="my-0 bg-danger">1</p>
+          <p class="my-0 bg-danger">2</p>
+          <p class="my-0 bg-danger">3</p>
+        </div>
+        <div class="col d-flex justify-content-between bg-success">
+          <p class="my-0 bg-danger">1</p>
+          <p class="my-0 bg-danger">2</p>
+          <p class="my-0 bg-danger">3</p>
+        </div>
+      </div>
+      <!-- /row -->
+      <!-- row -->
+      <div class="row">
+        <div class="col bg-success">
+          <p class="my-0 text-center">justify-content-start</p>
+        </div>
+        <div class="col bg-warning">
+          <p class="my-0 text-center">justify-content-center</p>
+        </div>
+        <div class="col bg-success">
+          <p class="my-0 text-center">justify-content-end</p>
+        </div>
+        <div class="col bg-warning">
+          <p class="my-0 text-center">justify-content-around</p>
+        </div>
+        <div class="col bg-success">
+          <p class="my-0 text-center">justify-content-between</p>
+        </div>
+      </div>
+      <!-- /row -->
+      <!-- /justify-content -->
+    </div>
+    <!-- /задание 3 -->
+    <!-- Скрипты  -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

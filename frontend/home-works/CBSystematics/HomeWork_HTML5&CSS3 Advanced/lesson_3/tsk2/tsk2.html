@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>skyWorker</title>
+  </head>
+  <body>
+    <section>
+      <i class="skyWalker fab fa-jedi-order"></i>
+      <input class="" type="text" />
+      <div data-worker="clean" class="item" data-value="c">
+        c
+      </div>
+      <div data-worker="backspace" class="item" data-value="back">
+        <i class="fas fa-backspace"></i>
+      </div>
+      <div data-worker="insert" class="item" data-value="+">
+        <i class="fas fa-plus"></i>
+      </div>
+      <div data-worker="insert" class="item" data-value="**">
+        X
+        <small style="align-self: flex-start;">n</small>
+      </div>
+      <div data-worker="insert" class="item" data-value="!">n!</div>
+      <div class="item parentheses">
+        <div data-worker="insert" class="item" data-value="(">
+          (
+        </div>
+        <div data-worker="insert" class="item" data-value=")">
+          )
+        </div>
+      </div>
+      <div data-worker="insert" class="item" data-value="-">
+        <i class="fas fa-minus"></i>
+      </div>
+      <div data-worker="insert" class="item" data-value="7">
+        7
+      </div>
+      <div data-worker="insert" class="item" data-value="8">
+        8
+      </div>
+      <div data-worker="insert" class="item" data-value="9">
+        9
+      </div>
+      <div data-worker="insert" class="item" data-value="*">
+        <i class="fas fa-times"></i>
+      </div>
+      <div data-worker="insert" class="item" data-value="4">
+        4
+      </div>
+      <div data-worker="insert" class="item" data-value="5">
+        5
+      </div>
+      <div data-worker="insert" class="item" data-value="6">
+        6
+      </div>
+      <div data-worker="insert" class="item" data-value="/">
+        <i class="fas fa-divide"></i>
+      </div>
+      <div data-worker="insert" class="item" data-value="1">
+        1
+      </div>
+      <div data-worker="insert" class="item" data-value="2">
+        2
+      </div>
+      <div data-worker="insert" class="item" data-value="3">
+        3
+      </div>
+      <div data-worker="equals" class="item" data-value="=">
+        <i class="fas fa-equals"></i>
+      </div>
+      <div data-worker="insert" class="item" data-value="0">0</div>
+      <div data-worker="insert" class="item" data-value=".">.</div>
+    </section>
+    <script>
+      const section = document.querySelector("section");
+      const input = document.querySelector("input");
+      const logo = document.querySelector(".skyWalker");
+      const workers = {};
+      workers.equals = new Worker("js/equals.js");
+      workers.backspace = new Worker("js/backspace.js");
+      workers.clean = new Worker("js/clean.js");
+      workers.insert = new Worker("js/insert.js");
+
+      function post(whom) {
+        let message = JSON.stringify([].slice.call(arguments, 1));
+        arguments[0].postMessage(message);
+      }
+
+      workers.equals.addEventListener("message", (event) => {
+        input.value = JSON.parse(event.data);
+      });
+      workers.backspace.addEventListener("message", (event) => {
+        input.value = JSON.parse(event.data);
+      });
+      workers.clean.addEventListener("message", (event) => {
+        input.value = JSON.parse(event.data);
+      });
+      workers.insert.addEventListener("message", (event) => {
+        input.value = JSON.parse(event.data);
+      });
+
+      section.addEventListener("click", (event) => {
+        let obj = event.target;
+        let value = obj.dataset.value;
+        if (obj.dataset.worker) {
+          let objWorker = obj.dataset.worker;
+          post(workers[`${objWorker}`], input.value, value);
+        }
+        if (input.value.length > 13) {
+          logo.style.fontSize = "12px";
+        } else {
+          logo.style.fontSize = "50px";
+        }
+      });
+    </script>
+  </body>
+</html>

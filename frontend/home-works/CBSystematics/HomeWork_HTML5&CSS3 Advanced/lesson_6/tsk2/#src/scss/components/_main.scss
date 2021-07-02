@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  // flex-direction: column;
+  background-color: rgb(94, 124, 121);
+  width: 100vw;
+  overflow-x: hidden;
+  @import "aside";
+  @import "article";
+}

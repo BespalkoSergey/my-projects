@@ -1,0 +1,49 @@
+
+.bg-asfalt{
+    background-color: #34495e;
+}
+
+.bg-dkgrey{
+    background-color: #7f8c8d;
+}
+
+.bg-dkwhite{
+    background-color: #ecf0f1;
+}
+
+body{
+    background-color:  #7f8c8d;
+
+    @media screen and (max-width: 768px) {
+        background-color:   #34495e;
+    }
+}
+
+// HEADER
+
+.header {
+    .full-name {
+        color: #ecf0f1;
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+    
+    .prof {
+        color: #bdc3c7;
+        font-size: 24px;
+    }    
+
+    img {
+        margin: 10px 10px;
+        max-width: 90%;
+        max-height: 300px;
+    }
+}
+
+// HEADER end
+
+// MAIN 
+
+
+
+// MAIN end 
