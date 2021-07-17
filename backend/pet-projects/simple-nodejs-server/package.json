@@ -1,0 +1,20 @@
+{
+  "name": "simple-nodejs-server",
+  "version": "1.0.0",
+  "description": "simple server",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "supervisor -n error index.js"
+  },
+  "author": "Bespalko Sergey <bespalkoser@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "query-string": "^7.0.1"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.6.3",
+    "supervisor": "^0.12.0"
+  }
+}
