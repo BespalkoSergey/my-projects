@@ -44,12 +44,12 @@ const server = http.createServer((req, res) => {
       res.writeHead(400, { 'Content-Type': 'text/html' })
 
       res.end(`
-      <h1>Oops ... Something bad happened</h>
+      <h1>Oops ... Something bad happened</h1>
       `)
       break
   }
 })
 
-server.listen(8080, () => {
+server.listen(3000, () => {
   console.log('server is runnig ...')
 })
