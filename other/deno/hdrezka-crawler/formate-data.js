@@ -6,9 +6,9 @@ const customFs = new CustomFS()
 
 const data = await customFs.read(RAW_DATA_PATH)
 
-const minimizedData = data.replaceAll(new RegExp('\\]\\n\\[|\\]\\[|\\[\\]|[\x00-\x1F]|\\s', 'gm'), '')
+const minimizedData = data.replaceAll(new RegExp('[\x00-\x1F]', 'gm'), '')
 
-const validArrayString = minimizedData.replaceAll('}{', '},{')
+const validArrayString = minimizedData.replaceAll(new RegExp('}\\]\\[{ | }\\]\\[\\s{', 'gm'), '},{')
 
 const parsedData = validArrayString ? JSON.parse(validArrayString) : []
 
