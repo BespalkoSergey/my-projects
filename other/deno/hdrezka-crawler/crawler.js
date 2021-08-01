@@ -30,7 +30,7 @@ const start = async () => {
     Deno.removeSync(RAW_DATA_PATH)
   }
 
-  print('Parser Started')
+  print('Crawler Started')
   stopwatch.start()
 
   const cdp = new CustomDOMParser()
