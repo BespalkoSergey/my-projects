@@ -1,4 +1,4 @@
-## Crawler <img src="https://deno.land/logo.svg" style="margin-bottom: -5px" alt="Deno" width="30"/></img>
+## Crawler <img src="https://deno.land/logo.svg" alt="Deno" width="30"/>
 
 This crawler was created to solve the problem that I was not satisfied \
 with the filters on the movie watching site. It walks through the pages \
