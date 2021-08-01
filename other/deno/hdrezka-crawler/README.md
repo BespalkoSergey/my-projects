@@ -15,6 +15,6 @@ collecting movie data and generating raw data.
 - Install [Deno](https://deno.land/#installation), if it`s not
 - Run in your shell
 
-```javascript
+```
 deno run -A --unstable crawler.js
 ```
