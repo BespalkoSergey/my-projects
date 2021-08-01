@@ -7,7 +7,9 @@ addEventListener('message', async ({ data: { url } }) => {
   if (typeof url === 'string') {
     await parse(url)
     postMessage({ url, isParsed: true })
+    return
   }
+
   postMessage({ url, isParsed: false })
 })
 

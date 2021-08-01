@@ -1,18 +1,19 @@
 import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts'
+import { RECURSIVE_FETCH_DELAY_STEP, REQUEST_DELAY_STEEP } from '../constants/constants.js'
 
 export class CustomDOMParser {
-  static _requestsDelay = 500
+  static _requestsDelay = REQUEST_DELAY_STEEP
   #parser
   #delayInit
   #timer
 
   constructor() {
     this.#parser = new DOMParser()
-    this.#delayInit = 1000
+    this.#delayInit = RECURSIVE_FETCH_DELAY_STEP
   }
 
   get #delay() {
-    return (this.#delayInit += this.#delayInit + CustomDOMParser._requestsDelay)
+    return (this.#delayInit += this.#delayInit)
   }
 
   #recursiveFetch(url) {
@@ -38,7 +39,7 @@ export class CustomDOMParser {
   }
 
   async #fetch(url) {
-    CustomDOMParser._requestsDelay += 500
+    CustomDOMParser._requestsDelay += REQUEST_DELAY_STEEP
 
     const response = await new Promise((resolve) => {
       setTimeout(() => fetch(url).then((response) => resolve(response)), CustomDOMParser._requestsDelay)

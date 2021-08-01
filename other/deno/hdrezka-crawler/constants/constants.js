@@ -39,3 +39,9 @@ export const SORTED_JSON_PATH = format({
   name: 'sorted-data',
   ext: '.json',
 })
+
+// they disconnect the connection if they see that many requests have arrived at the same time,
+// this is the minimum steps that was achieved
+export const REQUEST_DELAY_STEEP = 100
+
+export const RECURSIVE_FETCH_DELAY_STEP = 200
