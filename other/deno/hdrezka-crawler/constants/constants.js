@@ -2,7 +2,16 @@ import { format } from 'https://deno.land/std@0.103.0/path/mod.ts'
 
 export const MAIN_ULR = 'https://rezkery.com/films/best/comedy/'
 
-export const EXCLUDED_COUNTRIES = ['индия', 'ссср', 'россия', 'корея южная', 'китай', 'украина', 'беларусь']
+export const EXCLUDED_COUNTRIES = ['индия',
+  'ссср',
+  'россия',
+  'корея южная',
+  'китай',
+  'украина',
+  'беларусь',
+  'казахстан',
+  'гонконг'
+]
 
 export const MONTHS = [
   'января',
@@ -16,28 +25,28 @@ export const MONTHS = [
   'сентября',
   'октября',
   'ноября',
-  'декабря',
+  'декабря'
 ]
 
 export const RAW_DATA_PATH = format({
   root: '/',
   dir: 'dist',
   name: 'raw-data',
-  ext: '.txt',
+  ext: '.txt'
 })
 
 export const JSON_PATH = format({
   root: '/',
   dir: 'dist',
   name: 'data',
-  ext: '.json',
+  ext: '.json'
 })
 
 export const SORTED_JSON_PATH = format({
   root: '/',
   dir: 'dist',
   name: 'sorted-data',
-  ext: '.json',
+  ext: '.json'
 })
 
 // they disconnect the connection if they see that many requests have arrived at the same time,
